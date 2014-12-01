@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('autocomplete-resource',['$resource'])
+angular.module('autocomplete-resource',[])
     .directive('autocompleteResource', function ($timeout, $injector) {
         return {
             restrict: 'AEC',
