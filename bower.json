@@ -1,0 +1,22 @@
+{
+  "name": "resource-autocomplete",
+  "version": "0.0.0",
+  "authors": [
+    "jdondero <juliandondero@gmail.com>"
+  ],
+  "description": "Directiva de autocomplete para recursos de angular",
+  "main": ["autocomplete-resource.js","stylesheets/autocomplete-resource.css"],
+  "keywords": [
+    "autocomplete",
+    "resource",
+    "angular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

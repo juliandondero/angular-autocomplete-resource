@@ -1,0 +1,26 @@
+<div class="form-group">
+    <label ng-show="label">{{label}}</label>
+    <div class="input-group">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+
+        <input ng-disabled="ngdisabled" ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" placeholder="{{placeholder}}" ng-keypress="keyDown($event)" ng-change="updateItemList()" ng-blur="handleBlur()" />
+		<span ng-show="model && !clearInputOnSelectionParsed" class="input-group-btn">
+        	<button ng-click="removeItem()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button>
+      	</span>
+
+    </div>
+    <div style="position:relative;" ng-class="{'top-label':haveLabel(),'top-sin-label':!haveLabel(),'tieneAlert': tieneAlert() }"  >
+        <alert style="position:absolute;top:0px;left:0px;" type="danger" ng-show="((model.$invalid) || (model==undefined) ) && requiredmsj" ><span class="glyphicon glyphicon-warning-sign"></span> {{requiredmsj}}</alert>
+        <ul class="autocomplete dropdown-menu" ng-hide="!listOpened || selected" style="display:block;position:absolute;top:0px;left:0px;" role="menu"  >
+            <li ng-hide="items" class="autocomplete-warning-label"><span class="glyphicon glyphicon-info-sign"></span> No se encontraron resultados </li>
+            <li class="item" ng-class="{active:isCurrent($index)}" ng-repeat="item in items track by $index" ng-mousedown="handleSelection(item)" style="cursor:pointer"  ng-mouseenter="setCurrent($index)">
+                <p class="itemicon" ng-class="itemicon"></p>
+                <p class="itemlabel">{{getItemLabel(item,itemlabel)}}</p>
+                <p ng-show="itemdescrip" class="itemdescrip">{{getItemLabel(item,itemdescrip)}}</p>
+                <p ng-show="itemdescrip2" class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</p>
+                <div class="reset-float"/>
+            </li>
+
+        </ul>
+    </div>
+</div>
