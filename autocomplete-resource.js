@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('historiaClinicaApp')
+angular.module('autocomplete-resource',['$resource'])
     .directive('autocompleteResource', function ($timeout, $injector) {
         return {
             restrict: 'AEC',
