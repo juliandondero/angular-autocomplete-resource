@@ -16,7 +16,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "examples",
+    "example",
     "tests",
     ".sass-cache",
     "sass",
