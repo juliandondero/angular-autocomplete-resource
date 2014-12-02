@@ -22,7 +22,11 @@
     "sass",
     "config.rb",
     "autocomplete-resource.js",
-    "autocomplete-resource_template.html",
+    "autocomplete-resource_template.html"
   ],
-  "dependencies": {"underscore": "*"}
+    "dependencies": {
+        "angular": ">=1",
+        "underscore": "*",
+        "angular-bootstrap":"*"
+    }
 }

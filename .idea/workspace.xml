@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ee962c8a-6e86-47e7-b993-6002ac832c1b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/bower.json" afterPath="$PROJECT_DIR$/test/bower.json" />
     </list>
     <ignored path="angular-autocomplete-resource.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bower.json" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="bower.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.4074075" vertical-offset="101" max-vertical-offset="612">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.8590998" vertical-offset="83" max-vertical-offset="684">
+              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -66,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autocomplete-resource.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="autocomplete-resource.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sass/autocomplete-resource.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0022172949" vertical-offset="935" max-vertical-offset="1386">
+            <state vertical-scroll-proportion="-0.011494253" vertical-offset="935" max-vertical-offset="1386">
               <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
               <folding />
             </state>
@@ -260,7 +259,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1368" height="720" extended-state="7" />
+    <frame x="-1" y="24" width="1368" height="720" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -355,14 +354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.4074075" vertical-offset="101" max-vertical-offset="612">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autocomplete-resource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3291" max-vertical-offset="3816">
@@ -373,8 +364,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/autocomplete-resource.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0022172949" vertical-offset="935" max-vertical-offset="1386">
+        <state vertical-scroll-proportion="-0.011494253" vertical-offset="935" max-vertical-offset="1386">
           <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8590998" vertical-offset="83" max-vertical-offset="684">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
           <folding />
         </state>
       </provider>
