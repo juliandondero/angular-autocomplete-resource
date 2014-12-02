@@ -3,8 +3,15 @@
 
 }
 ul.autocomplete.dropdown-menu {
+
+  padding-top:0px;
+  padding-bottom:1px;
+  font-family: Arial,sans-serif;
+  backgorund-color:white;
   position: absolute;
+  width:100%;
   left: 15px;
+
   .top-label {
     top:60px;
   }
@@ -42,31 +49,49 @@ autocomplete-resource {
      }
    } */
   .item.active {
+    background-color: #ebf2fe;
     .itemlabel {
-      color: white;
+     // color: white;
     }
     .itemicon {
-      color: white;
+      color: red;
     }
-    background-color: #798CA4;
+
   }
   .item {
-    font-size: 12px;
+
+    cursor: default;
+    padding: 0 4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    text-align: left;
+    border-top: 1px solid #e6e6e6;
+    font-size: 13px;
+    line-height:13px;
+    color: #999;
+
     .itemlabel {
-      color: #777;
+
       float: left;
       display: inline;
-      margin-right: 5px;
+      padding-right: 3px;
+      color: #000;
     }
     .itemicon {
-      font-size: 10px;
+
       color: #bbb;
       float: left;
       display: inline;
       margin-right: 5px;
-      line-height: 12px;
+
+    }
+    .itemdescrip{
+      padding-left:15px;
     }
   }
+
   .autocomplete-warning-label {
     color: #aaa;
     font-size: 11px;

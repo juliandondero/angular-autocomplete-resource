@@ -5,27 +5,32 @@
 
 /* line 5, ../../sass/autocomplete-resource.scss */
 ul.autocomplete.dropdown-menu {
+  padding-top: 0px;
+  padding-bottom: 1px;
+  font-family: Arial,sans-serif;
+  backgorund-color: white;
   position: absolute;
+  width: 100%;
   left: 15px;
 }
-/* line 8, ../../sass/autocomplete-resource.scss */
+/* line 15, ../../sass/autocomplete-resource.scss */
 ul.autocomplete.dropdown-menu .top-label {
   top: 60px;
 }
-/* line 11, ../../sass/autocomplete-resource.scss */
+/* line 18, ../../sass/autocomplete-resource.scss */
 ul.autocomplete.dropdown-menu .top-sin-label {
   top: 35px;
 }
-/* line 14, ../../sass/autocomplete-resource.scss */
+/* line 21, ../../sass/autocomplete-resource.scss */
 ul.autocomplete.dropdown-menu li {
   padding: 7px;
 }
-/* line 17, ../../sass/autocomplete-resource.scss */
+/* line 24, ../../sass/autocomplete-resource.scss */
 ul.autocomplete.dropdown-menu li p {
   margin: 0px;
 }
 
-/* line 22, ../../sass/autocomplete-resource.scss */
+/* line 29, ../../sass/autocomplete-resource.scss */
 autocomplete-resource .alert {
   padding: 5px;
   margin-top: 5px;
@@ -33,12 +38,12 @@ autocomplete-resource .alert {
   margin-bottom: 0px;
 }
 
-/* line 30, ../../sass/autocomplete-resource.scss */
+/* line 37, ../../sass/autocomplete-resource.scss */
 autocomplete-resource .tieneAlert {
   height: 35px;
 }
 
-/* line 34, ../../sass/autocomplete-resource.scss */
+/* line 41, ../../sass/autocomplete-resource.scss */
 .autocomplete {
   /* .item:hover {
 
@@ -50,39 +55,46 @@ autocomplete-resource .tieneAlert {
      }
    } */
 }
-/* line 44, ../../sass/autocomplete-resource.scss */
+/* line 51, ../../sass/autocomplete-resource.scss */
 .autocomplete .item.active {
-  background-color: #798CA4;
+  background-color: #ebf2fe;
 }
-/* line 45, ../../sass/autocomplete-resource.scss */
-.autocomplete .item.active .itemlabel {
-  color: white;
-}
-/* line 48, ../../sass/autocomplete-resource.scss */
+/* line 56, ../../sass/autocomplete-resource.scss */
 .autocomplete .item.active .itemicon {
-  color: white;
-}
-/* line 53, ../../sass/autocomplete-resource.scss */
-.autocomplete .item {
-  font-size: 12px;
-}
-/* line 55, ../../sass/autocomplete-resource.scss */
-.autocomplete .item .itemlabel {
-  color: #777;
-  float: left;
-  display: inline;
-  margin-right: 5px;
+  color: red;
 }
 /* line 61, ../../sass/autocomplete-resource.scss */
+.autocomplete .item {
+  cursor: default;
+  padding: 0 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  border-top: 1px solid #e6e6e6;
+  font-size: 13px;
+  line-height: 13px;
+  color: #999;
+}
+/* line 75, ../../sass/autocomplete-resource.scss */
+.autocomplete .item .itemlabel {
+  float: left;
+  display: inline;
+  padding-right: 3px;
+  color: #000;
+}
+/* line 82, ../../sass/autocomplete-resource.scss */
 .autocomplete .item .itemicon {
-  font-size: 10px;
   color: #bbb;
   float: left;
   display: inline;
   margin-right: 5px;
-  line-height: 12px;
 }
-/* line 70, ../../sass/autocomplete-resource.scss */
+/* line 90, ../../sass/autocomplete-resource.scss */
+.autocomplete .item .itemdescrip {
+  padding-left: 15px;
+}
+/* line 95, ../../sass/autocomplete-resource.scss */
 .autocomplete .autocomplete-warning-label {
   color: #aaa;
   font-size: 11px;
