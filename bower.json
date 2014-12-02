@@ -1,30 +1,32 @@
 {
-  "name": "autocomplete-recource",
-  "version": "0.0.8",
-  "authors": [
-    "jdondero <juliandondero@gmail.com>"
-  ],
-  "description": "Directiva de autocomplete para recursos de angular",
-  "main": ["dist/autocomplete-resource.js","dist/stylesheets/autocomplete-resource.css"],
-  "keywords": [
-    "autocomplete",
-    "resource",
-    "angular"
-  ],
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "example",
-    "tests",
-    ".sass-cache",
-    "sass",
-    "config.rb",
-    "autocomplete-resource.js",
-    "autocomplete-resource_template.html",
-      "development"
-  ],
+    "name": "autocomplete-recource",
+    "version": "0.0.9",
+    "authors": [
+        "jdondero <juliandondero@gmail.com>"
+    ],
+    "description": "Directiva de autocomplete para recursos de angular",
+    "main": ["dist/autocomplete-resource.js","dist/stylesheets/autocomplete-resource.css"],
+    "keywords": [
+        "autocomplete",
+        "resource",
+        "angular"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "example",
+        "tests",
+        ".sass-cache",
+        "sass",
+        "config.rb",
+        "autocomplete-resource.js",
+        "autocomplete-resource_template.html",
+        "development",
+        ".idea"
+
+    ],
     "dependencies": {
         "angular": ">=1",
         "underscore": "*",
