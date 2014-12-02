@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee962c8a-6e86-47e7-b993-6002ac832c1b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/.bowerrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/.editorconfig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/.buildignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/images/yeoman.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/scripts/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/scripts/controllers/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/scripts/services/testservice.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/styles/main.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/test.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/app/views/main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test/.jshintrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test/karma.conf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test/spec/controllers/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test/spec/services/testservice.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/angular-autocomplete-resource.iml" afterPath="$PROJECT_DIR$/.idea/angular-autocomplete-resource.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ee962c8a-6e86-47e7-b993-6002ac832c1b" name="Default" comment="" />
     <ignored path="angular-autocomplete-resource.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -318,7 +288,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1368" height="720" extended-state="6" />
+    <frame x="-1" y="24" width="1368" height="720" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
