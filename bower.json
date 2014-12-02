@@ -20,6 +20,9 @@
     "tests",    
     ".sass-cache",
     "sass",
-    "config.rb"
-  ]
+    "config.rb",
+    "autocomplete-resource.js",
+    "autocomplete-resource_template.html",
+  ],
+  "dependencies": {"underscore": "*"}
 }
