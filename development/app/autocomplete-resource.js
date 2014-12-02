@@ -201,6 +201,7 @@ angular.module('autocomplete-resource',[])
                 }, true);
 
 
+
             },
             templateUrl: 'views/autocomplete-resource_template.html'
         };

@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee962c8a-6e86-47e7-b993-6002ac832c1b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/072afeb72097fea1d0965f168205410e65542c57/autocomplete-resource.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/autocomplete-resource_template.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/development/app/app/autocomplete-resource_template.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/development/Gruntfile.js" afterPath="$PROJECT_DIR$/development/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autocomplete-resource.js" afterPath="$PROJECT_DIR$/autocomplete-resource.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/development/app/autocomplete-resource.js" afterPath="$PROJECT_DIR$/development/app/autocomplete-resource.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/autocomplete-resource.js" afterPath="$PROJECT_DIR$/dist/autocomplete-resource.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autocomplete-resource_template.html" afterPath="$PROJECT_DIR$/autocomplete-resource_template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/development/app/views/autocomplete-resource_template.html" afterPath="$PROJECT_DIR$/development/app/views/autocomplete-resource_template.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/bower.json" afterPath="$PROJECT_DIR$/example/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular-autocomplete-resource.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,28 +39,8 @@
       <file leaf-file-name="autocomplete-resource.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dist/autocomplete-resource.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3291" max-vertical-offset="3816">
-              <caret line="204" column="1837" selection-start-line="204" selection-start-column="1837" selection-end-line="204" selection-end-column="1861" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autocomplete-resource.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/stylesheets/autocomplete-resource.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1710">
-              <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="autocomplete-resource.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autocomplete-resource.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3291" max-vertical-offset="3816">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state vertical-scroll-proportion="-6.35" vertical-offset="3273" max-vertical-offset="3798">
+              <caret line="203" column="1890" selection-start-line="203" selection-start-column="1890" selection-end-line="203" selection-end-column="1890" />
               <folding />
             </state>
           </provider>
@@ -68,8 +59,8 @@
       <file leaf-file-name="autocomplete-resource_template.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autocomplete-resource_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.925926" vertical-offset="11" max-vertical-offset="558">
-              <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
+            <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="558">
+              <caret line="14" column="153" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -78,8 +69,8 @@
       <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/development/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3849" max-vertical-offset="8478">
-              <caret line="180" column="42" selection-start-line="180" selection-start-column="36" selection-end-line="180" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="897" max-vertical-offset="8586">
+              <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -98,8 +89,8 @@
       <file leaf-file-name="bower.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04892368" vertical-offset="11" max-vertical-offset="738">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.42270058" vertical-offset="0" max-vertical-offset="756">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -123,10 +114,11 @@
         <option value="$PROJECT_DIR$/test/bower_components/autocomplete-resource/dist/autocomplete-resource.js" />
         <option value="$PROJECT_DIR$/test/bower_components/autocomplete-resource/dist/stylesheets/autocomplete-resource.css" />
         <option value="$PROJECT_DIR$/sass/autocomplete-resource.scss" />
-        <option value="$PROJECT_DIR$/autocomplete-resource_template.html" />
-        <option value="$PROJECT_DIR$/dist/autocomplete-resource.js" />
-        <option value="$PROJECT_DIR$/development/Gruntfile.js" />
         <option value="$PROJECT_DIR$/development/app/index.html" />
+        <option value="$PROJECT_DIR$/autocomplete-resource.js" />
+        <option value="$PROJECT_DIR$/autocomplete-resource_template.html" />
+        <option value="$PROJECT_DIR$/development/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/dist/autocomplete-resource.js" />
         <option value="$PROJECT_DIR$/bower.json" />
       </list>
     </option>
@@ -205,7 +197,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="development" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -220,10 +212,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="development" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -372,22 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autocomplete-resource.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3291" max-vertical-offset="3816">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autocomplete-resource_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.925926" vertical-offset="11" max-vertical-offset="558">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/autocomplete-resource.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
@@ -396,10 +368,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/autocomplete-resource.js">
+    <entry file="file://$PROJECT_DIR$/development/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3316" max-vertical-offset="3816">
-          <caret line="204" column="1837" selection-start-line="204" selection-start-column="1837" selection-end-line="204" selection-end-column="1861" />
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autocomplete-resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69142854" vertical-offset="2607" max-vertical-offset="3852">
+          <caret line="165" column="38" selection-start-line="165" selection-start-column="38" selection-end-line="165" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -414,24 +394,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/development/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3849" max-vertical-offset="8478">
-          <caret line="180" column="42" selection-start-line="180" selection-start-column="36" selection-end-line="180" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="897" max-vertical-offset="8586">
+          <caret line="67" column="35" selection-start-line="67" selection-start-column="35" selection-end-line="67" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/development/app/index.html">
+    <entry file="file://$PROJECT_DIR$/autocomplete-resource_template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="1350">
-          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+        <state vertical-scroll-proportion="-9.333333" vertical-offset="0" max-vertical-offset="558">
+          <caret line="14" column="153" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/autocomplete-resource.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.35" vertical-offset="3273" max-vertical-offset="3798">
+          <caret line="203" column="1890" selection-start-line="203" selection-start-column="1890" selection-end-line="203" selection-end-column="1890" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04892368" vertical-offset="11" max-vertical-offset="738">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.42270058" vertical-offset="0" max-vertical-offset="756">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
           <folding />
         </state>
       </provider>
