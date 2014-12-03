@@ -78,33 +78,23 @@ autocomplete-resource .tieneAlert {
 }
 /* line 75, ../../sass/autocomplete-resource.scss */
 .autocomplete .item .itemlabel {
-  display: initial;
-  text-overflow: ellipsis;
   float: left;
   display: inline;
   padding-right: 3px;
   color: #000;
 }
-/* line 83, ../../sass/autocomplete-resource.scss */
+/* line 82, ../../sass/autocomplete-resource.scss */
 .autocomplete .item .itemicon {
-  display: initial;
   color: #bbb;
   float: left;
   display: inline;
   margin-right: 5px;
 }
-/* line 91, ../../sass/autocomplete-resource.scss */
-.autocomplete .item .itemdescrip {
-  display: initial;
-  text-overflow: ellipsis;
-}
-/* line 96, ../../sass/autocomplete-resource.scss */
+/* line 94, ../../sass/autocomplete-resource.scss */
 .autocomplete .item .itemdescrip2 {
-  display: initial;
-  text-overflow: ellipsis;
   padding-left: 15px;
 }
-/* line 103, ../../sass/autocomplete-resource.scss */
+/* line 100, ../../sass/autocomplete-resource.scss */
 .autocomplete .autocomplete-warning-label {
   color: #aaa;
   font-size: 11px;
