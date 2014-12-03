@@ -9,7 +9,7 @@ Directiva de autocomplete para recursos (*ngResources*) de Angular. Utiliza *boo
 ```
 
 * incluir el módulo en la aplicación:
-```bash
+```javascript
 angular
   .module('testAutocompleteApp', [
     'ngResource',
@@ -19,7 +19,7 @@ angular
   ]);
   ```
  * Incluir (si no se incluyó en la instalación con grunt o gulp):
- ```
+ ```html
      <link rel="stylesheet" href="bower_components/autocomplete-resource/dist/stylesheets/autocomplete-resource.css" />
 
     <script src="bower_components/autocomplete-resource/dist/autocomplete-resource.js"></script>
