@@ -73,14 +73,15 @@ autocomplete-resource {
     color: #999;
 
     .itemlabel {
-
+      display:initial;
+      text-overflow: ellipsis;
       float: left;
       display: inline;
       padding-right: 3px;
       color: #000;
     }
     .itemicon {
-
+      display:initial;
       color: #bbb;
       float: left;
       display: inline;
@@ -88,6 +89,13 @@ autocomplete-resource {
 
     }
     .itemdescrip{
+      display:initial;
+      text-overflow: ellipsis;
+      
+    }
+    .itemdescrip2{
+      display:initial;
+      text-overflow: ellipsis;
       padding-left:15px;
     }
   }
