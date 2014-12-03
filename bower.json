@@ -25,7 +25,8 @@
         "autocomplete-resource.js",
         "autocomplete-resource_template.html",
         "development",
-        ".idea"
+        ".idea",
+        "extras"
 
     ],
     "dependencies": {
