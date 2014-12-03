@@ -74,3 +74,9 @@ angular
 | __onSelect__ | Función de callback ejecutada al seleccionar un item de la lista. |*function*|    '=' |
 | __prefilters__ | Filtros extras enviados en el método query del recurso. Estos pueden ser *bindeados* a objetos fuera de la directiva. Por ejemplo otro select externo para elegir el país. El autocomplete harà el get con el filtro del pais elegido desde el controllador que utiliza la directiva. |*Object*|    '=' |
 | __ngdisabled__ | Expresión para determinar si el input esta desabilitado o habilitado. |*Expression*|    '=' |
+
+# Demo
+En /example:
+1) npm install
+2) bower install
+3) grunt serve
