@@ -1,10 +1,13 @@
 [{
 	"id":1,
-	"descripcion":"Buenos aires"
+	"descripcion":"Buenos aires",
+    "texto":"Capital federal"
 },{
 	"id":2,
-	"descripcion":"Mendoza"
+	"descripcion":"Mendoza",
+    "texto":"Capital federal"
 },{
 	"id":3,
-	"descripcion":"Jujuy"
+	"descripcion":"Jujuy",
+    "texto":"Capital federal"
 }]
