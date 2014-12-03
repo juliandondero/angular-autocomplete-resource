@@ -76,7 +76,7 @@ angular
 | __ngdisabled__ | Expresión para determinar si el input esta desabilitado o habilitado. |*Expression*|    '=' |
 
 # Demo
-En /example:
+En *__/example:__*
 
 1. npm install
 2. bower install
