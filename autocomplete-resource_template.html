@@ -11,7 +11,7 @@
     </div>
     <div style="position:relative;" ng-class="{'top-label':haveLabel(),'top-sin-label':!haveLabel(),'tieneAlert': tieneAlert() }"  >
         <alert style="position:absolute;top:0px;left:0px;" type="danger" ng-show="((model.$invalid) || (model==undefined) ) && requiredmsj" ><span class="glyphicon glyphicon-warning-sign"></span> {{requiredmsj}}</alert>
-        <ul class="autocomplete dropdown-menu" ng-hide-="!listOpened || selected" style="display:block;position:absolute;top:0px;left:0px;" role="menu"  >
+        <ul class="autocomplete dropdown-menu" ng-hide="!listOpened || selected" style="display:block;position:absolute;top:0px;left:0px;" role="menu"  >
             <li ng-hide="items" class="autocomplete-warning-label"><span class="glyphicon glyphicon-info-sign"></span> No se encontraron resultados </li>
             <li class="item" ng-class="{active:isCurrent($index)}" ng-repeat="item in items track by $index" ng-mousedown="handleSelection(item)" style="cursor:pointer"  ng-mouseenter="setCurrent($index)">
                 <span ng-if="itemicon" class="itemicon" ng-class="itemicon" ></span>
