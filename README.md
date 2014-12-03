@@ -7,6 +7,26 @@ Directiva de autocomplete para recursos (*ngResources*) de Angular. Utiliza *boo
 ```bash
    bower install --save autocomplete-recource
 ```
+
+* incluir el módulo en la aplicación:
+```bash
+angular
+  .module('testAutocompleteApp', [
+    'ngResource',
+    'ngSanitize',
+    'ngTouch',
+    'autocomplete-resource'
+  ]);
+  ```
+ * Incluir (si no se incluyó en la instalación con grunt o gulp):
+ ```
+     <link rel="stylesheet" href="bower_components/autocomplete-resource/dist/stylesheets/autocomplete-resource.css" />
+
+    <script src="bower_components/autocomplete-resource/dist/autocomplete-resource.js"></script>
+
+ ```
+
+
 ## Dependencias
 * Angular
 * Underscorejs
