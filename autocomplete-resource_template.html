@@ -15,10 +15,10 @@
             <li ng-hide="items" class="autocomplete-warning-label"><span class="glyphicon glyphicon-info-sign"></span> No se encontraron resultados </li>
             <li class="item" ng-class="{active:isCurrent($index)}" ng-repeat="item in items track by $index" ng-mousedown="handleSelection(item)" style="cursor:pointer"  ng-mouseenter="setCurrent($index)">
                 <p ng-if="itemicon" class="itemicon" ng-class="itemicon"></p>
-                <div ng-if="itemlabel" class="itemlabel">{{getItemLabel(item,itemlabel)}}</div>
-                <div ng-if="itemdescrip" class="itemdescrip">{{getItemLabel(item,itemdescrip)}}</div>
-                <div ng-if="itemdescrip2" class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</div>
-                <div class="autocomplete-reset-float "/>
+                <span ng-if="itemlabel" class="itemlabel">{{getItemLabel(item,itemlabel)}}</span>
+                <span ng-if="itemdescrip" class="itemdescrip">{{getItemLabel(item,itemdescrip)}}</span>
+                <span ng-if="itemdescrip2" class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</span>
+                <span class="autocomplete-reset-float"></span>
             </li>
 
         </ul>
