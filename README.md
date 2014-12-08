@@ -74,6 +74,7 @@ angular
 | __onSelect__ | Función de callback ejecutada al seleccionar un item de la lista. |*function*|    '=' |
 | __prefilters__ | Filtros extras enviados en el método query del recurso. Estos pueden ser *bindeados* a objetos fuera de la directiva. Por ejemplo otro select externo para elegir el país. El autocomplete harà el get con el filtro del pais elegido desde el controllador que utiliza la directiva. |*Object*|    '=' |
 | __ngdisabled__ | Expresión para determinar si el input esta desabilitado o habilitado. |*Expression*|    '=' |
+| __resultsin__ | Determina en que atributo del json de respuesta, viene la colección para el autocomplete. (django rest: results {total:...,results:[...]}. Si este atributo no se setea, buscara un array si la respuesta es un array, o un array dentro de .results, si la respuesta es un objeto.  |*String*|    '@' |
 
 # Demo
 En *__/example:__*
