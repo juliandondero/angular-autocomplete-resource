@@ -7,7 +7,7 @@ Directiva de autocomplete para recursos (*ngResources*) de Angular. Utiliza *boo
 * Instalar módulo
 
 ```bash
-   bower install --save autocomplete-recource
+   bower install --save autocomplete-resource
 ```
 
 * incluir el módulo en la aplicación:
