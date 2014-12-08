@@ -1,16 +1,22 @@
-[{
-	"id":1,
-	"descripcion":"Buenos aires",
-    "texto":"Capital federal ",
-    "texto2":"Argentina"
-},{
-	"id":2,
-	"descripcion":"Mendoza",
-    "texto":"Capital federal Capital federal Capital federal Capital federal",
-    "texto2":"Argentina"
-},{
-	"id":3,
-	"descripcion":"Jujuy",
-    "texto":"Capital federal Capital federal Capital federal Capital federal",
-    "texto2":"Argentina"
-}]
+{
+    "data": [
+        {
+            "descripcion": "Buenos aires",
+            "id": 1,
+            "texto": "Capital federal ",
+            "texto2": "Argentina"
+        },
+        {
+            "descripcion": "Mendoza",
+            "id": 2,
+            "texto": "Capital federal Capital federal Capital federal Capital federal",
+            "texto2": "Argentina"
+        },
+        {
+            "descripcion": "Jujuy",
+            "id": 3,
+            "texto": "Capital federal Capital federal Capital federal Capital federal",
+            "texto2": "Argentina"
+        }
+    ]
+}

@@ -21,7 +21,8 @@ angular.module('autocomplete-resource',[])
                 serviceatributefiltername: '@',
                 onSelect: '&',
                 prefilters: '=',
-                ngdisabled: '='
+                ngdisabled: '=',
+		        resultsin:'@'
             },
             link: function (scope, elem, attrs) {
 
@@ -72,12 +73,16 @@ angular.module('autocomplete-resource',[])
                     params[scope.serviceatributefiltername] = filter;
 
                     service.query(params, function (itemsReturned) {
+			if (scope.resultsin==undefined){
 
-                        if (itemsReturned instanceof Array) { //si no esta paginado
-                            scope.items = itemsReturned;
-                        } else {
-                            scope.items = (itemsReturned.results.length > 0) ? itemsReturned.results : undefined;
-                        }
+		                if (itemsReturned instanceof Array) { //si no esta paginado
+		                    scope.items = itemsReturned;
+		                } else {
+		                    scope.items = (itemsReturned.results.length > 0) ? itemsReturned.results : undefined;
+		                }
+			} else {
+				scope.items=scope.getItemLabel(itemsReturned,scope.resultsin);
+			}
 
                         scope.selected = false;
                         scope.current = 0;
