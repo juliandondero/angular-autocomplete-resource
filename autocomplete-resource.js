@@ -21,6 +21,7 @@ angular.module('autocomplete-resource',[])
                 serviceatributefiltername: '@',
                 onSelect: '&',
                 prefilters: '=',
+                pageatribute: '@',
                 ngdisabled: '=',
                 resultsin:'@'
             },
@@ -53,6 +54,13 @@ angular.module('autocomplete-resource',[])
 
                 scope.current = 0;
                 scope.selected = true; // hides the list initially
+
+
+
+                //Inicia en pagina 1, supongo no tiene sentido pagina 0
+                scope.page = 1;
+
+
                 scope.isCurrent = function (index) {
                     return scope.current == index;
                 };
@@ -68,6 +76,11 @@ angular.module('autocomplete-resource',[])
                     var params = {};
                     if (scope.prefilters) {
                         params = scope.prefilters;
+                    }
+
+                    if (scope.pageatribute)
+                    {
+                        params[scope.pageatribute] = scope.page;
                     }
 
 
@@ -150,8 +163,16 @@ angular.module('autocomplete-resource',[])
                             scope.current = scope.current + 1;
                             if (scope.items != undefined && scope.current > scope.items.length - 1)
                             {
-                              
-                              scope.current = scope.items.length - 1;
+                              if(scope.pageatribute){
+                                //TODO: ver que pasa cuando llego a la ultima pagina
+                                scope.page++;
+                                scope.current = 0;
+                                scope.refreshItems(scope.modelfilter);
+                              }
+                              else
+                              {
+                                scope.current = scope.items.length - 1;
+                              }
                               //TODO si esta manejando paginado entonces muevo a siguiente pagina
 
                             }
@@ -164,6 +185,13 @@ angular.module('autocomplete-resource',[])
                           if (scope.items != undefined && scope.current < 0)
                           {
                             scope.current = 0;
+
+                            if(scope.pageatribute && scope.page>1){
+                             scope.page--;
+                             scope.refreshItems(scope.modelfilter);
+                            }
+
+
                           }
 
                           break;
