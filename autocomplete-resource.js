@@ -22,7 +22,7 @@ angular.module('autocomplete-resource',[])
                 onSelect: '&',
                 prefilters: '=',
                 ngdisabled: '=',
-		        resultsin:'@'
+                resultsin:'@'
             },
             link: function (scope, elem, attrs) {
 
@@ -59,6 +59,7 @@ angular.module('autocomplete-resource',[])
                 scope.setCurrent = function (index) {
                     scope.current = index;
                 };
+
                 //buca items desde el servicio rest enviando el filtro en modelfilter
                 scope.refreshItems = function (filter) {
 
@@ -113,7 +114,7 @@ angular.module('autocomplete-resource',[])
                 scope.haveLabel=function(){
                     return scope.label!=undefined;
                 }
-                scope.tieneAlert=function(){
+                scope.haveAlert=function(){
                     return scope.requiredmsj!=undefined && scope.requiredmsj!='';
                 }
                 scope.removeItem = function () {
@@ -123,60 +124,58 @@ angular.module('autocomplete-resource',[])
                 scope.keyDown = function ($event) {
 
                     //si la tecla apretada es una flecha, aumento el index de la seleccion sino busco remoto
-                    if (($event.keyCode < 37 || $event.keyCode > 40) && $event.keyCode != 13) {
+                    switch ($event.keyCode) {
+                        case 27:
+                            //es escape, cerramos la lista y borramos el input
+                            scope.listOpened = undefined;
+                            scope.removeItem();
 
-                        switch ($event.keyCode) {
-                            case 27:
-                                //es escape, cerramos la lista y borramos el input
-                                scope.listOpened = undefined;
-                                scope.removeItem();
+                            break;
+                        case 8:
+                            //es escape, cerramos la lista y borramos el input
+                            scope.listOpened = undefined;
+                            scope.model = undefined;
 
-                                break;
-                            case 8:
-                                //es escape, cerramos la lista y borramos el input
-                                scope.listOpened = undefined;
-                                scope.model = undefined;
+                            break;
+                        case 9:         //TAB
+                            //No hacemos nada con el tab, simplemente pasamos al siguiente input
+                            break;
 
-                                break;
-                            case 9:         //TAB
-                                //No hacemos nada con el tab, simplemente pasamos al siguiente input
-                                break;
-                            /*default:
-                                var charCode = $event.keyCode || $event.which;
-                                scope.refreshItems(
-                                        ((scope.modelfilter != undefined) ? scope.modelfilter : "") + String.fromCharCode(charCode)
-                                );
+                        case 40: //flecha hacia abajo
+                          if (!scope.listOpened) {
+                            //si aprete flecha para abjo y no habia nada en el input
+                            scope.refreshItems(scope.modelfilter);
+                          } else {
 
-                                break;*/
-                        }
+                            scope.current = scope.current + 1;
+                            if (scope.items != undefined && scope.current > scope.items.length - 1)
+                            {
+                              
+                              scope.current = scope.items.length - 1;
+                              //TODO si esta manejando paginado entonces muevo a siguiente pagina
 
-                    } else {
-                        //es alguna flecha
-                        switch ($event.keyCode) {
-                            case 40: //flecha hacia abajo
-                                if (!scope.listOpened) {
-                                    //si aprete flecha para abjo y no habia nada en el input
-                                    scope.refreshItems(scope.modelfilter);
-                                } else {
+                            }
+                          }
+                          break;
 
-                                    scope.current = scope.current + 1;
-                                }
+                        case 38:
+                          scope.current = scope.current - 1;
 
-                                break;
-                            case 38:
-                                scope.current = scope.current - 1;
-                                break;
-                            case 13: //enter
-                                scope.handleSelection(scope.items[scope.current]);
-                                break;
-                        }
+                          if (scope.items != undefined && scope.current < 0)
+                          {
+                            scope.current = 0;
+                          }
 
-                        if (scope.items != undefined && scope.current > scope.items.length - 1) scope.current = scope.items.length - 1;
-                        if (scope.items != undefined && scope.current < 0) scope.current = 0;
+                          break;
+                        case 13: //enter
+                          scope.handleSelection(scope.items[scope.current]);
+                          break;
+
                     }
 
-
                 };
+
+        
                 //retorna el label del item,puede ser recursivo es decir: item.propiedad.propiedad2
                 scope.getItemLabel = function (item,path) {
                     if (path!=undefined) {

@@ -9,7 +9,7 @@
       	</span>
 
     </div>
-    <div style="position:relative;" ng-class="{'top-label':haveLabel(),'top-sin-label':!haveLabel(),'tieneAlert': tieneAlert() }"  >
+    <div style="position:relative;" ng-class="{'top-label':haveLabel(),'top-sin-label':!haveLabel(),'haveAlert': haveAlert() }"  >
         <alert style="position:absolute;top:0px;left:0px;" type="danger" ng-show="((model.$invalid) || (model==undefined) ) && requiredmsj" ><span class="glyphicon glyphicon-warning-sign"></span> {{requiredmsj}}</alert>
         <ul class="autocomplete dropdown-menu" ng-hide="!listOpened || selected" style="display:block;position:absolute;top:0px;left:0px;" role="menu"  >
             <li ng-hide="items" class="autocomplete-warning-label"><span class="glyphicon glyphicon-info-sign"></span> No se encontraron resultados </li>
