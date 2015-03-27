@@ -93,20 +93,16 @@ angular.module('autocomplete-resource',[])
                     });
                 };
 
-                scope.updateItemList = function() {
-                    var lastModelFilter =scope.modelfilter;
+                scope.updateItemList = function(filter) {
 
+                    var lastModelFilter =filter;
                     $timeout(function () {
 
                         if(lastModelFilter==scope.modelfilter)
                         {
-                            scope.refreshItems(scope.modelfilter);
-
+                            scope.refreshItems(filter);
 
                         }
-
-
-
                     }, 500);
 
 
@@ -122,8 +118,8 @@ angular.module('autocomplete-resource',[])
                     scope.modelfilter = undefined;
                 }
                 scope.keyDown = function ($event) {
-
                     //si la tecla apretada es una flecha, aumento el index de la seleccion sino busco remoto
+
                     if (($event.keyCode < 37 || $event.keyCode > 40) && $event.keyCode != 13) {
 
                         switch ($event.keyCode) {
@@ -134,21 +130,29 @@ angular.module('autocomplete-resource',[])
 
                                 break;
                             case 8:
-                                //es escape, cerramos la lista y borramos el input
+                                //es backspace
                                 scope.listOpened = undefined;
-                                scope.model = undefined;
+                                if (scope.model == undefined)
+                                {
+                                    var filter = scope.modelfilter.substr(0,scope.modelfilter.length-1);
+                                    scope.updateItemList(filter);
+
+                                }
+                                else
+                                {
+                                    scope.model = undefined;
+                                }
+
+
 
                                 break;
                             case 9:         //TAB
                                 //No hacemos nada con el tab, simplemente pasamos al siguiente input
                                 break;
-                            /*default:
-                                var charCode = $event.keyCode || $event.which;
-                                scope.refreshItems(
-                                        ((scope.modelfilter != undefined) ? scope.modelfilter : "") + String.fromCharCode(charCode)
-                                );
-
-                                break;*/
+                            default:
+                                scope.updateItemList(((scope.modelfilter != undefined) ? scope.modelfilter : "") + $event.key);
+                                
+                                break;
                         }
 
                     } else {
@@ -207,6 +211,6 @@ angular.module('autocomplete-resource',[])
                 }, true);
 
             },
-            template: '<div class="form-group"> <label ng-show="label">{{label}}</label> <div class="input-group"> <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span> <input ng-disabled="ngdisabled" ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" placeholder="{{placeholder}}" ng-keydown="keyDown($event)" ng-change="updateItemList()" ng-blur="handleBlur()" /> <span ng-show="model && !clearInputOnSelectionParsed" class="input-group-btn"> <button ng-click="removeItem()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button> </span> </div> <div style="position:relative;" ng-class="{\'top-label\':haveLabel(),\'top-sin-label\':!haveLabel(),\'tieneAlert\': tieneAlert() }"  > <alert style="position:absolute;top:0px;left:0px;" type="danger" ng-show="((model.$invalid) || (model==undefined) ) && requiredmsj" ><span class="glyphicon glyphicon-warning-sign"></span> {{requiredmsj}}</alert> <ul class="autocomplete dropdown-menu" ng-hide="!listOpened || selected" style="display:block;position:absolute;top:0px;left:0px;" role="menu"  > <li ng-hide="items" class="autocomplete-warning-label"><span class="glyphicon glyphicon-info-sign"></span> No se encontraron resultados </li> <li class="item" ng-class="{active:isCurrent($index)}" ng-repeat="item in items track by $index" ng-mousedown="handleSelection(item)" style="cursor:pointer"  ng-mouseenter="setCurrent($index)"> <span ng-if="itemicon" class="itemicon" ng-class="itemicon" ></span> <span ng-if="itemlabel" class="itemlabel">{{getItemLabel(item,itemlabel)}}</span> <span ng-if="itemdescrip" class="itemdescrip">{{getItemLabel(item,itemdescrip)}}</span> <span ng-if="itemdescrip2" class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</span> <span class="autocomplete-reset-float"></span> </li> </ul> </div > </div > '
+            template: '<div class="form-group"> <label ng-show="label">{{label}}</label> <div class="input-group"> <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span> <input ng-disabled="ngdisabled" ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" placeholder="{{placeholder}}" ng-keydown="keyDown($event)" ng-blur="handleBlur()" /> <span ng-show="model && !clearInputOnSelectionParsed" class="input-group-btn"> <button ng-click="removeItem()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button> </span> </div> <div style="position:relative;" ng-class="{\'top-label\':haveLabel(),\'top-sin-label\':!haveLabel(),\'tieneAlert\': tieneAlert() }"  > <alert style="position:absolute;top:0px;left:0px;" type="danger" ng-show="((model.$invalid) || (model==undefined) ) && requiredmsj" ><span class="glyphicon glyphicon-warning-sign"></span> {{requiredmsj}}</alert> <ul class="autocomplete dropdown-menu" ng-hide="!listOpened || selected" style="display:block;position:absolute;top:0px;left:0px;" role="menu"  > <li ng-hide="items" class="autocomplete-warning-label"><span class="glyphicon glyphicon-info-sign"></span> No se encontraron resultados </li> <li class="item" ng-class="{active:isCurrent($index)}" ng-repeat="item in items track by $index" ng-mousedown="handleSelection(item)" style="cursor:pointer"  ng-mouseenter="setCurrent($index)"> <span ng-if="itemicon" class="itemicon" ng-class="itemicon" ></span> <span ng-if="itemlabel" class="itemlabel">{{getItemLabel(item,itemlabel)}}</span> <span ng-if="itemdescrip" class="itemdescrip">{{getItemLabel(item,itemdescrip)}}</span> <span ng-if="itemdescrip2" class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</span> <span class="autocomplete-reset-float"></span> </li> </ul> </div > </div > '
         };
     });
