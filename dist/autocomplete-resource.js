@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('autocomplete-resource',[])
+angular.module('autocomplete-resource',['ui.bootstrap'])
     .directive('autocompleteResource', function ($timeout, $injector) {
         return {
             restrict: 'AEC',
@@ -22,7 +22,11 @@ angular.module('autocomplete-resource',[])
                 onSelect: '&',
                 prefilters: '=',
                 ngdisabled: '=',
-                resultsin:'@'
+                resultsin:'@',
+                itemDetail:'@',
+                wrapText:   '@',
+                popoverDetail: '@',
+                popoverDetailPlacement: '@'
             },
             link: function (scope, elem, attrs) {
 
@@ -74,16 +78,16 @@ angular.module('autocomplete-resource',[])
 
                     service.query(params, function (itemsReturned) {
 
-                    if (scope.resultsin==undefined){
+                        if (scope.resultsin==undefined){
 
-                        if (itemsReturned instanceof Array) { //si no esta paginado
-                            scope.items = itemsReturned;
+                            if (itemsReturned instanceof Array) { //si no esta paginado
+                                scope.items = itemsReturned;
+                            } else {
+                                scope.items = (itemsReturned.results.length > 0) ? itemsReturned.results : undefined;
+                            }
                         } else {
-                            scope.items = (itemsReturned.results.length > 0) ? itemsReturned.results : undefined;
+                            scope.items=scope.getItemLabel(itemsReturned,scope.resultsin);
                         }
-                    } else {
-                        scope.items=scope.getItemLabel(itemsReturned,scope.resultsin);
-                    }
 
                         scope.selected = false;
                         scope.current = 0;
@@ -151,7 +155,7 @@ angular.module('autocomplete-resource',[])
                                 break;
                             default:
                                 scope.updateItemList(((scope.modelfilter != undefined) ? scope.modelfilter : "") + $event.key);
-                                
+
                                 break;
                         }
 
@@ -210,7 +214,33 @@ angular.module('autocomplete-resource',[])
                     }
                 }, true);
 
+                scope.withEllipsis=function(){
+                  return !(scope.wrapText=='true');
+                };
+                scope.withItemDetail=function(){
+                    return scope.itemDetail!=undefined && scope.itemDetail=='true';
+                };
+
+                scope.withPopoverDetail=function(){
+                    return scope.popoverDetail!=undefined && scope.popoverDetail=='true';
+                };
+
+                scope.getPopoverTemplate=function(){
+                    if (scope.withPopoverDetail()){
+                     return "'autocompleteResurceTemplate.html'";
+                    } else {
+                        return null;
+                    }
+                };
+
+                scope.getPopoverPlacement=function(){
+                    if (scope.popoverDetailPlacement!=undefined && scope.popoverDetailPlacement!=""){
+                        return scope.popoverDetailPlacement;
+                    } else {
+                        return "right";
+                    }
+                };
             },
-            template: '<div class="form-group"> <label ng-show="label">{{label}}</label> <div class="input-group"> <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span> <input ng-disabled="ngdisabled" ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" placeholder="{{placeholder}}" ng-keydown="keyDown($event)" ng-blur="handleBlur()" /> <span ng-show="model && !clearInputOnSelectionParsed" class="input-group-btn"> <button ng-click="removeItem()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button> </span> </div> <div style="position:relative;" ng-class="{\'top-label\':haveLabel(),\'top-sin-label\':!haveLabel(),\'tieneAlert\': tieneAlert() }"  > <alert style="position:absolute;top:0px;left:0px;" type="danger" ng-show="((model.$invalid) || (model==undefined) ) && requiredmsj" ><span class="glyphicon glyphicon-warning-sign"></span> {{requiredmsj}}</alert> <ul class="autocomplete dropdown-menu" ng-hide="!listOpened || selected" style="display:block;position:absolute;top:0px;left:0px;" role="menu"  > <li ng-hide="items" class="autocomplete-warning-label"><span class="glyphicon glyphicon-info-sign"></span> No se encontraron resultados </li> <li class="item" ng-class="{active:isCurrent($index)}" ng-repeat="item in items track by $index" ng-mousedown="handleSelection(item)" style="cursor:pointer"  ng-mouseenter="setCurrent($index)"> <span ng-if="itemicon" class="itemicon" ng-class="itemicon" ></span> <span ng-if="itemlabel" class="itemlabel">{{getItemLabel(item,itemlabel)}}</span> <span ng-if="itemdescrip" class="itemdescrip">{{getItemLabel(item,itemdescrip)}}</span> <span ng-if="itemdescrip2" class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</span> <span class="autocomplete-reset-float"></span> </li> </ul> </div > </div > '
+            template: '<div class="form-group"> <label ng-show="label">{{label}}</label> <div class="input-group"> <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span> <input ng-disabled="ngdisabled"  ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" placeholder="{{placeholder}}" ng-keydown="keyDown($event)"  ng-blur="handleBlur()" /> <span ng-show="model && !clearInputOnSelectionParsed" class="input-group-btn"> <button ng-click="removeItem()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button> </span> </div> <div style="position:relative;" ng-class="{\'top-label\':haveLabel(),\'top-sin-label\':!haveLabel(),\'tieneAlert\': tieneAlert() }"  > <alert style="position:absolute;top:0px;left:0px;" type="danger" ng-show="((model.$invalid) || (model==undefined) ) && requiredmsj" ><span class="glyphicon glyphicon-warning-sign"></span> {{requiredmsj}}</alert> <ul class="autocomplete dropdown-menu" style="display:block;position:absolute;top:0px;left:0px;" ng-hide="!listOpened || selected"  role="menu"  > <li ng-hide="items" class="autocomplete-warning-label"><span class="glyphicon glyphicon-info-sign"></span> No se encontraron resultados </li> <li class="item" ng-class="{\'ellipsis\':withEllipsis(),\'active\':isCurrent($index)}" ng-repeat="item in items track by $index" ng-mousedown="handleSelection(item)" style="cursor:pointer"  ng-mouseenter="setCurrent($index)" popover-template="{{getPopoverTemplate()}}" popover-trigger="mouseenter" popover-placement="{{getPopoverPlacement()}}" > <span ng-if="itemicon" class="itemicon" ng-class="itemicon" ></span> <span ng-if="itemlabel" class="itemlabel">{{getItemLabel(item,itemlabel)}}</span> <span ng-if="itemdescrip" class="itemdescrip">{{getItemLabel(item,itemdescrip)}}</span> <span ng-if="itemdescrip2" class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</span> <span class="autocomplete-reset-float"></span> </li> <li ng-if="withItemDetail()" ng-if="items[current]" class="autocomplete-lupa"> <div ng-if="itemlabel" class="itemlabel" >{{getItemLabel(items[current],itemlabel)}}</div> <div ng-if="itemdescrip" class="itemdescrip" >{{getItemLabel(items[current],itemdescrip)}}</div> <div ng-if="itemdescrip2" class="itemdescrip2" >{{getItemLabel(items[current],itemdescrip2)}}</div> </li> </ul> </div> </div> <script type="text/ng-template" id="autocompleteResurceTemplate.html"> <div class="autocomplete-popover" style="text-overflow: clip;white-space: nowrap;"> <div class="itemlabel">{{getItemLabel(item,itemlabel)}}</div> <div class="itemdescrip" >{{getItemLabel(item,itemdescrip)}}</div> <div class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</div> </div> </script>'
         };
     });

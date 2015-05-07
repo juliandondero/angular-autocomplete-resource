@@ -58,13 +58,17 @@ autocomplete-resource {
     }
 
   }
+
+  .ellipsis{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
   .item {
 
     cursor: default;
     padding: 0 4px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
 
     text-align: left;
     border-top: 1px solid #e6e6e6;
@@ -100,3 +104,43 @@ autocomplete-resource {
     font-size: 11px;
   }
 }
+
+
+.autocomplete-lupa {
+  border-top: 1px solid #CCC;
+  background-color: rgb(255, 255, 190);
+  text-overflow: clip;
+  color: #999;
+  font-size:12px;
+
+  .itemlabel {
+
+    padding-right: 3px;
+    color: #000;
+  }
+
+  .itemdescrip{
+
+
+  }
+  .itemdescrip2{
+
+  }
+
+}
+
+.autocomplete-popover {
+  .itemlabel {
+
+    color: #000;
+  }
+
+  .itemdescrip{
+      color: #999;
+
+  }
+  .itemdescrip2{
+    color: #999;
+  }
+}
+

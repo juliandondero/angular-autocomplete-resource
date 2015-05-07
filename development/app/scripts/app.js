@@ -13,5 +13,6 @@ angular
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'autocomplete-resource'
+    'autocomplete-resource',
+    'ui.bootstrap'
   ]);

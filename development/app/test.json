@@ -9,13 +9,13 @@
         {
             "descripcion": "Mendoza",
             "id": 2,
-            "texto": "Capital federal Capital federal Capital federal Capital federal",
+            "texto": "Capital federal",
             "texto2": "Argentina"
         },
         {
             "descripcion": "Jujuy",
             "id": 3,
-            "texto": "Capital federal Capital federal Capital federal Capital federal",
+            "texto": "Capital federal",
             "texto2": "Argentina"
         }
     ]

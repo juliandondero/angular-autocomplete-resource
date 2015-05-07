@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('autocomplete-resource',[])
+angular.module('autocomplete-resource',['ui.bootstrap'])
     .directive('autocompleteResource', function ($timeout, $injector) {
         return {
             restrict: 'AEC',
@@ -22,7 +22,11 @@ angular.module('autocomplete-resource',[])
                 onSelect: '&',
                 prefilters: '=',
                 ngdisabled: '=',
-                resultsin:'@'
+                resultsin:'@',
+                itemDetail:'@',
+                wrapText:   '@',
+                popoverDetail: '@',
+                popoverDetailPlacement: '@'
             },
             link: function (scope, elem, attrs) {
 
@@ -74,16 +78,16 @@ angular.module('autocomplete-resource',[])
 
                     service.query(params, function (itemsReturned) {
 
-                    if (scope.resultsin==undefined){
+                        if (scope.resultsin==undefined){
 
-                        if (itemsReturned instanceof Array) { //si no esta paginado
-                            scope.items = itemsReturned;
+                            if (itemsReturned instanceof Array) { //si no esta paginado
+                                scope.items = itemsReturned;
+                            } else {
+                                scope.items = (itemsReturned.results.length > 0) ? itemsReturned.results : undefined;
+                            }
                         } else {
-                            scope.items = (itemsReturned.results.length > 0) ? itemsReturned.results : undefined;
+                            scope.items=scope.getItemLabel(itemsReturned,scope.resultsin);
                         }
-                    } else {
-                        scope.items=scope.getItemLabel(itemsReturned,scope.resultsin);
-                    }
 
                         scope.selected = false;
                         scope.current = 0;
@@ -151,7 +155,7 @@ angular.module('autocomplete-resource',[])
                                 break;
                             default:
                                 scope.updateItemList(((scope.modelfilter != undefined) ? scope.modelfilter : "") + $event.key);
-                                
+
                                 break;
                         }
 
@@ -210,6 +214,32 @@ angular.module('autocomplete-resource',[])
                     }
                 }, true);
 
+                scope.withEllipsis=function(){
+                  return !(scope.wrapText=='true');
+                };
+                scope.withItemDetail=function(){
+                    return scope.itemDetail!=undefined && scope.itemDetail=='true';
+                };
+
+                scope.withPopoverDetail=function(){
+                    return scope.popoverDetail!=undefined && scope.popoverDetail=='true';
+                };
+
+                scope.getPopoverTemplate=function(){
+                    if (scope.withPopoverDetail()){
+                     return "'autocompleteResurceTemplate.html'";
+                    } else {
+                        return null;
+                    }
+                };
+
+                scope.getPopoverPlacement=function(){
+                    if (scope.popoverDetailPlacement!=undefined && scope.popoverDetailPlacement!=""){
+                        return scope.popoverDetailPlacement;
+                    } else {
+                        return "right";
+                    }
+                };
             },
             templateUrl: 'views/autocomplete-resource_template.html'
         };

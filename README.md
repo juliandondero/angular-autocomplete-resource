@@ -75,6 +75,10 @@ angular
 | __prefilters__ | Filtros extras enviados en el método query del recurso. Estos pueden ser *bindeados* a objetos fuera de la directiva. Por ejemplo otro select externo para elegir el país. El autocomplete harà el get con el filtro del pais elegido desde el controllador que utiliza la directiva. |*Object*|    '=' |
 | __ngdisabled__ | Expresión para determinar si el input esta desabilitado o habilitado. |*Expression*|    '=' |
 | __resultsin__ | Determina en que atributo del json de respuesta, viene la colección para el autocomplete. (django rest: results {total:...,results:[...]}. Si este atributo no se setea, buscara un array si la respuesta es un array, o un array dentro de .results, si la respuesta es un objeto.  |*String*|    '@' |
+| __wrap-text__ | Determina si el texto de cada item se corta (ellipsis) o hace wrap en cada renglon.   |*Boolean*|    '@' |
+| __item-detail__ | Determina si se ve el item elegido como ultimo elemento del autocomplete, con la descripcion entera. |*Boolean*|    '@' |
+| __popover-detail__ | Determina si se ve el popover con el detalle del item |*Boolean*|    '@' |
+| __popover-detail-placement__ | Determina donde se ubica el popover detail |*Boolean*|    '@' |
 
 # Demo
 En *__/example:__*

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('autocomplete-resource',[])
+angular.module('autocomplete-resource',['ui.bootstrap'])
     .directive('autocompleteResource', function ($timeout, $injector) {
         return {
             restrict: 'AEC',
@@ -22,7 +22,11 @@ angular.module('autocomplete-resource',[])
                 onSelect: '&',
                 prefilters: '=',
                 ngdisabled: '=',
-		        resultsin:'@'
+                resultsin:'@',
+                itemDetail:'@',
+                wrapText:   '@',
+                popoverDetail: '@',
+                popoverDetailPlacement: '@'
             },
             link: function (scope, elem, attrs) {
 
@@ -73,16 +77,17 @@ angular.module('autocomplete-resource',[])
                     params[scope.serviceatributefiltername] = filter;
 
                     service.query(params, function (itemsReturned) {
-			if (scope.resultsin==undefined){
 
-		                if (itemsReturned instanceof Array) { //si no esta paginado
-		                    scope.items = itemsReturned;
-		                } else {
-		                    scope.items = (itemsReturned.results.length > 0) ? itemsReturned.results : undefined;
-		                }
-			} else {
-				scope.items=scope.getItemLabel(itemsReturned,scope.resultsin);
-			}
+                        if (scope.resultsin==undefined){
+
+                            if (itemsReturned instanceof Array) { //si no esta paginado
+                                scope.items = itemsReturned;
+                            } else {
+                                scope.items = (itemsReturned.results.length > 0) ? itemsReturned.results : undefined;
+                            }
+                        } else {
+                            scope.items=scope.getItemLabel(itemsReturned,scope.resultsin);
+                        }
 
                         scope.selected = false;
                         scope.current = 0;
@@ -92,20 +97,16 @@ angular.module('autocomplete-resource',[])
                     });
                 };
 
-                scope.updateItemList = function() {
-                    var lastModelFilter =scope.modelfilter;
+                scope.updateItemList = function(filter) {
 
+                    var lastModelFilter =filter;
                     $timeout(function () {
 
                         if(lastModelFilter==scope.modelfilter)
                         {
-                            scope.refreshItems(scope.modelfilter);
-
+                            scope.refreshItems(filter);
 
                         }
-
-
-
                     }, 500);
 
 
@@ -121,8 +122,8 @@ angular.module('autocomplete-resource',[])
                     scope.modelfilter = undefined;
                 }
                 scope.keyDown = function ($event) {
-
                     //si la tecla apretada es una flecha, aumento el index de la seleccion sino busco remoto
+
                     if (($event.keyCode < 37 || $event.keyCode > 40) && $event.keyCode != 13) {
 
                         switch ($event.keyCode) {
@@ -133,21 +134,29 @@ angular.module('autocomplete-resource',[])
 
                                 break;
                             case 8:
-                                //es escape, cerramos la lista y borramos el input
+                                //es backspace
                                 scope.listOpened = undefined;
-                                scope.model = undefined;
+                                if (scope.model == undefined)
+                                {
+                                    var filter = scope.modelfilter.substr(0,scope.modelfilter.length-1);
+                                    scope.updateItemList(filter);
+
+                                }
+                                else
+                                {
+                                    scope.model = undefined;
+                                }
+
+
 
                                 break;
                             case 9:         //TAB
                                 //No hacemos nada con el tab, simplemente pasamos al siguiente input
                                 break;
-                            /*default:
-                                var charCode = $event.keyCode || $event.which;
-                                scope.refreshItems(
-                                        ((scope.modelfilter != undefined) ? scope.modelfilter : "") + String.fromCharCode(charCode)
-                                );
+                            default:
+                                scope.updateItemList(((scope.modelfilter != undefined) ? scope.modelfilter : "") + $event.key);
 
-                                break;*/
+                                break;
                         }
 
                     } else {
@@ -205,8 +214,32 @@ angular.module('autocomplete-resource',[])
                     }
                 }, true);
 
+                scope.withEllipsis=function(){
+                  return !(scope.wrapText=='true');
+                };
+                scope.withItemDetail=function(){
+                    return scope.itemDetail!=undefined && scope.itemDetail=='true';
+                };
 
+                scope.withPopoverDetail=function(){
+                    return scope.popoverDetail!=undefined && scope.popoverDetail=='true';
+                };
 
+                scope.getPopoverTemplate=function(){
+                    if (scope.withPopoverDetail()){
+                     return "'autocompleteResurceTemplate.html'";
+                    } else {
+                        return null;
+                    }
+                };
+
+                scope.getPopoverPlacement=function(){
+                    if (scope.popoverDetailPlacement!=undefined && scope.popoverDetailPlacement!=""){
+                        return scope.popoverDetailPlacement;
+                    } else {
+                        return "right";
+                    }
+                };
             },
             templateUrl: 'views/autocomplete-resource_template.html'
         };
