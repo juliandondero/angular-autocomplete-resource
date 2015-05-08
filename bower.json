@@ -32,7 +32,7 @@
     "dependencies": {
         "angular": ">=1",
         "underscore": "*",
-        "angular-bootstrap":"*",
+        "angular-bootstrap":">=13.0.0",
         "angular-animate": "*"
 
 
