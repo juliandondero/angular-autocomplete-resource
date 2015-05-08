@@ -130,6 +130,10 @@ autocomplete-resource {
 }
 
 .autocomplete-popover {
+
+  overflow:auto;
+  min-width:150px;
+
   .itemlabel {
 
     color: #000;

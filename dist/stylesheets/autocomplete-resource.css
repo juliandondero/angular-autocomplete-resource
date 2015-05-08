@@ -113,15 +113,20 @@ autocomplete-resource .tieneAlert {
   color: #000;
 }
 
-/* line 133, ../../sass/autocomplete-resource.scss */
+/* line 132, ../../sass/autocomplete-resource.scss */
+.autocomplete-popover {
+  overflow: auto;
+  min-width: 150px;
+}
+/* line 137, ../../sass/autocomplete-resource.scss */
 .autocomplete-popover .itemlabel {
   color: #000;
 }
-/* line 138, ../../sass/autocomplete-resource.scss */
+/* line 142, ../../sass/autocomplete-resource.scss */
 .autocomplete-popover .itemdescrip {
   color: #999;
 }
-/* line 142, ../../sass/autocomplete-resource.scss */
+/* line 146, ../../sass/autocomplete-resource.scss */
 .autocomplete-popover .itemdescrip2 {
   color: #999;
 }
