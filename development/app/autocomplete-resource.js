@@ -138,7 +138,9 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                                 scope.listOpened = undefined;
                                 if (scope.model == undefined)
                                 {
-                                    var filter = scope.modelfilter.substr(0,scope.modelfilter.length-1);
+                                    var filter = '';
+                                    if (scope.modelfilter!=undefined)
+                                      var  filter=scope.modelfilter.substr(0,scope.modelfilter.length-1);
                                     scope.updateItemList(filter);
 
                                 }
@@ -154,7 +156,12 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                                 //No hacemos nada con el tab, simplemente pasamos al siguiente input
                                 break;
                             default:
-                                scope.updateItemList(((scope.modelfilter != undefined) ? scope.modelfilter : "") + $event.key);
+                                var key = $event.key;
+                                if (key==undefined){
+                                    //chrome no devuelve key
+                                   key= String.fromCharCode($event.keyCode).toLowerCase();
+                                }
+                                scope.updateItemList(((scope.modelfilter != undefined) ? scope.modelfilter : "") + key);
 
                                 break;
                         }
