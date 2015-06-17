@@ -79,6 +79,9 @@ angular
 | __item-detail__ | Determina si se ve el item elegido como ultimo elemento del autocomplete, con la descripcion entera. |*Boolean*|    '@' |
 | __popover-detail__ | Determina si se ve el popover con el detalle del item |*Boolean*|    '@' |
 | __popover-detail-placement__ | Determina donde se ubica el popover detail (left,right,top,left) |*String*|    '@' |
+| __showarrowbtn__ | Determina si se muestra el boton de la flecha para desplegar la lista sin filtrar |*Boolean*|    '@' |
+
+
 
 # Demo
 En *__/example:__*

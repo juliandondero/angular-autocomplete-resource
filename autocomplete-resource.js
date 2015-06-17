@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('autocomplete-resource',['ui.bootstrap'])
-    .directive('autocompleteResource', function ($timeout, $injector) {
+    .directive('autocompleteResource', function ($timeout) {
         return {
             restrict: 'AEC',
             scope: {
@@ -26,9 +26,12 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 itemDetail:'@',
                 wrapText:   '@',
                 popoverDetail: '@',
-                popoverDetailPlacement: '@'
+                popoverDetailPlacement: '@',
+                showarrowbtn:'@'
             },
             link: function (scope, elem, attrs) {
+
+                scope.showArrowBtn=scope.showarrowbtn=="true";
 
                 scope.clearInputOnSelectionParsed = (scope.clearInputOnSelection=="true");
 
@@ -120,7 +123,15 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 scope.removeItem = function () {
                     scope.model = undefined;
                     scope.modelfilter = undefined;
-                }
+                };
+
+                scope.searchAll=function(){
+                    if (!scope.listOpened)
+                        scope.refreshItems(scope.modelfilter);
+                    else {
+                        scope.listOpened=false;
+                    }
+                };
                 scope.keyDown = function ($event) {
                     //si la tecla apretada es una flecha, aumento el index de la seleccion sino busco remoto
 
