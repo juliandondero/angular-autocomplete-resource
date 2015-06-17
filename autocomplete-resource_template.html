@@ -3,9 +3,9 @@
     <div class="input-group">
         <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
 
-        <input ng-disabled="ngdisabled"  ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" placeholder="{{placeholder}}" ng-keydown="keyDown($event)"  ng-blur="handleBlur()" />
+        <input ng-disabled="ngdisabled" id="inputFilter" ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" placeholder="{{placeholder}}" ng-keydown="keyDown($event)"  ng-blur="handleBlur()" />
         <span ng-if="!model && showArrowBtn" class="input-group-btn">
-        	<button ng-click="searchAll()" ng-keydown="keyDown($event)"  ng-blur="handleBlur()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-down"></span></button>
+        	<button ng-click="searchAll()" ng-disabled="ngdisabled" ng-blur="handleBlur()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-down"></span></button>
       	</span>
 		<span ng-if="model && !clearInputOnSelectionParsed" class="input-group-btn">
         	<button ng-click="removeItem()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button>

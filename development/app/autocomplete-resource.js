@@ -126,12 +126,16 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 };
 
                 scope.searchAll=function(){
-                    if (!scope.listOpened)
+                    $("#inputFilter").focus();
+
+                    if (!scope.listOpened) {
                         scope.refreshItems(scope.modelfilter);
-                    else {
+
+                    } else {
                         scope.listOpened=false;
                     }
                 };
+
                 scope.keyDown = function ($event) {
                     //si la tecla apretada es una flecha, aumento el index de la seleccion sino busco remoto
 
@@ -167,11 +171,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                                 //No hacemos nada con el tab, simplemente pasamos al siguiente input
                                 break;
                             default:
-                                var key = $event.key;
-                                if (key==undefined){
-                                    //chrome no devuelve key
-                                   key= String.fromCharCode($event.keyCode).toLowerCase();
-                                }
+                                var key = scope.getKeyFromEvent($event);
                                 scope.updateItemList(((scope.modelfilter != undefined) ? scope.modelfilter : "") + key);
 
                                 break;
@@ -257,6 +257,15 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     } else {
                         return "right";
                     }
+                };
+
+                scope.getKeyFromEvent=function(e){
+                    var key = e.key;
+                    if (key==undefined){
+                        //chrome no devuelve key
+                        key= String.fromCharCode(e.keyCode).toLowerCase();
+                    }
+                    return key;
                 };
             },
             templateUrl: 'views/autocomplete-resource_template.html'
