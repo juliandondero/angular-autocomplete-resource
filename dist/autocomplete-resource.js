@@ -126,7 +126,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 };
 
                 scope.searchAll=function(){
-                    $("#inputFilter").focus();
+                    elem.find("#inputFilter").focus();
 
                     if (!scope.listOpened) {
                         scope.refreshItems(scope.modelfilter);
