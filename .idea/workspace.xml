@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee962c8a-6e86-47e7-b993-6002ac832c1b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autocomplete-resource.js" afterPath="$PROJECT_DIR$/autocomplete-resource.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/development/app/autocomplete-resource.js" afterPath="$PROJECT_DIR$/development/app/autocomplete-resource.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/autocomplete-resource.js" afterPath="$PROJECT_DIR$/dist/autocomplete-resource.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/autocomplete-resource_template.html" afterPath="$PROJECT_DIR$/autocomplete-resource_template.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/development/app/views/autocomplete-resource_template.html" afterPath="$PROJECT_DIR$/development/app/views/autocomplete-resource_template.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/development/app/views/main.html" afterPath="$PROJECT_DIR$/development/app/views/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular-autocomplete-resource.iws" />
@@ -27,42 +31,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="autocomplete-resource.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="autocomplete-resource.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dist/autocomplete-resource.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="128" column="29" selection-start-line="128" selection-start-column="29" selection-end-line="128" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.5080645">
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding>
-                <marker date="1434721170298" expanded="true" signature="11534:11552" placeholder="..." />
-                <marker date="1434721170298" expanded="true" signature="11671:11706" placeholder="..." />
-                <marker date="1434721170298" expanded="true" signature="11915:11964" placeholder="..." />
-                <marker date="1434721170298" expanded="true" signature="12331:12345" placeholder="..." />
+                <marker date="1437584523653" expanded="true" signature="13302:13320" placeholder="..." />
+                <marker date="1437584523653" expanded="true" signature="13439:13474" placeholder="..." />
+                <marker date="1437584523653" expanded="true" signature="13683:13732" placeholder="..." />
+                <marker date="1437584523653" expanded="true" signature="14099:14113" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bower.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bower.json">
+      <file leaf-file-name="autocomplete-resource.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autocomplete-resource.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.082004555">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state vertical-scroll-proportion="-4.064516">
+              <caret line="127" column="58" selection-start-line="127" selection-start-column="58" selection-end-line="127" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autocomplete-resource_template.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autocomplete-resource_template.html">
+      <file leaf-file-name="bower.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.666667">
-              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-1.3333334">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,21 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="autocomplete-resource.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/autocomplete-resource.js">
+      <file leaf-file-name="autocomplete-resource_template.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/autocomplete-resource_template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/development/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+            <state vertical-scroll-proportion="-8.0">
+              <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -118,12 +107,12 @@
         <option value="$PROJECT_DIR$/development/bower.json" />
         <option value="$PROJECT_DIR$/development/app/scripts/app.js" />
         <option value="$PROJECT_DIR$/development/app/index.html" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/autocomplete-resource_template.html" />
         <option value="$PROJECT_DIR$/autocomplete-resource.js" />
+        <option value="$PROJECT_DIR$/autocomplete-resource_template.html" />
         <option value="$PROJECT_DIR$/development/app/views/main.html" />
-        <option value="$PROJECT_DIR$/dist/autocomplete-resource.js" />
+        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/dist/autocomplete-resource.js" />
       </list>
     </option>
   </component>
@@ -135,10 +124,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
+    <option name="x" value="63" />
     <option name="y" value="24" />
-    <option name="width" value="1442" />
-    <option name="height" value="852" />
+    <option name="width" value="1537" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -166,6 +155,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -215,7 +205,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,12 +275,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="24" width="1442" height="852" extended-state="6" />
+    <frame x="63" y="24" width="1537" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24841213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2478855" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31774417" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31763285" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -330,10 +319,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="243" column="2772" selection-start-line="243" selection-start-column="2772" selection-end-line="243" selection-end-column="2772" />
           <folding>
-            <marker date="1434721170298" expanded="true" signature="11534:11552" placeholder="..." />
-            <marker date="1434721170298" expanded="true" signature="11671:11706" placeholder="..." />
-            <marker date="1434721170298" expanded="true" signature="11915:11964" placeholder="..." />
-            <marker date="1434721170298" expanded="true" signature="12331:12345" placeholder="..." />
+            <marker date="1437584523653" expanded="true" signature="13302:13320" placeholder="..." />
+            <marker date="1437584523653" expanded="true" signature="13439:13474" placeholder="..." />
+            <marker date="1437584523653" expanded="true" signature="13683:13732" placeholder="..." />
+            <marker date="1437584523653" expanded="true" signature="14099:14113" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -350,10 +339,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="9" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -393,10 +382,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -465,10 +454,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -522,10 +511,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -579,10 +568,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -671,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6137339">
-          <caret line="81" column="113" selection-start-line="81" selection-start-column="113" selection-end-line="81" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/autocomplete-resource_template.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -693,16 +675,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autocomplete-resource_template.html">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.666667">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#alert#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.69719625">
+          <caret line="88" column="6" selection-start-line="88" selection-start-column="6" selection-end-line="88" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -716,30 +693,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/autocomplete-resource.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="130" column="14" selection-start-line="130" selection-start-column="14" selection-end-line="130" selection-end-column="14" />
+        <state vertical-scroll-proportion="-4.064516">
+          <caret line="127" column="58" selection-start-line="127" selection-start-column="58" selection-end-line="127" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3333334">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autocomplete-resource_template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.0">
+          <caret line="12" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="50" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/autocomplete-resource.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="29" selection-start-line="128" selection-start-column="29" selection-end-line="128" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.5080645">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding>
-            <marker date="1434721170298" expanded="true" signature="11534:11552" placeholder="..." />
-            <marker date="1434721170298" expanded="true" signature="11671:11706" placeholder="..." />
-            <marker date="1434721170298" expanded="true" signature="11915:11964" placeholder="..." />
-            <marker date="1434721170298" expanded="true" signature="12331:12345" placeholder="..." />
+            <marker date="1437584523653" expanded="true" signature="13302:13320" placeholder="..." />
+            <marker date="1437584523653" expanded="true" signature="13439:13474" placeholder="..." />
+            <marker date="1437584523653" expanded="true" signature="13683:13732" placeholder="..." />
+            <marker date="1437584523653" expanded="true" signature="14099:14113" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.082004555">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>

@@ -27,7 +27,11 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 wrapText:   '@',
                 popoverDetail: '@',
                 popoverDetailPlacement: '@',
-                showarrowbtn:'@'
+                showarrowbtn:'@',
+                labelsininput:'@',
+                withtooltip:'@',
+                tooltipplacement:'@'
+
             },
             link: function (scope, elem, attrs) {
 
@@ -35,11 +39,48 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
                 scope.clearInputOnSelectionParsed = (scope.clearInputOnSelection=="true");
 
+                scope.withTooltip=(scope.withtooltip=="true");
+
+                scope.getTooltip=function(){
+                    if (scope.withTooltip){
+                        return scope.getLabels(scope.model);
+                    } else {
+                        return null;
+                    }
+                };
                 scope.handleBlur = function () {
                     scope.listOpened = false;
                     if (scope.model == undefined)
                         scope.modelfilter = undefined;
 
+                };
+                scope.getItemLabels=function(selectedItem){
+                    var label = "";
+                    var descriptions_attribs =scope.labelsininput.split(',');
+
+                    _.each(descriptions_attribs ,function(atrib,index){
+                        var atrib_sin_espacios = atrib.replace(/\s+/, "");
+                        label+=scope.getItemLabel(selectedItem,atrib_sin_espacios);
+                        if (index < descriptions_attribs.length -1){
+                            label +=", ";
+                        }
+                    });
+                    return label;
+                };
+
+                scope.getLabels=function(selectedItem){
+                    var label = null;
+                    if (scope.labelsininput!=null){
+                        label =scope.getItemLabels(selectedItem);
+
+                    } else {
+                        label = scope.getItemLabel(selectedItem,scope.itemlabel);
+                    }
+                    return label;
+                };
+
+                scope.setInputLabel=function(selectedItem){
+                    scope.modelfilter= scope.getLabels(selectedItem);
                 };
 
                 scope.listOpened = false;
@@ -47,7 +88,8 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     if (scope.clearInputOnSelectionParsed) {
                         scope.modelfilter = '';
                     } else {
-                        scope.modelfilter = scope.getItemLabel(selectedItem,scope.itemlabel);
+                       scope.setInputLabel(selectedItem);
+
                     }
                     scope.model = selectedItem;
                     scope.current = 0;
@@ -218,8 +260,11 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     }
                 };
 
-                if (scope.model != undefined && !scope.clearInputOnSelectionParsed)
-                    scope.modelfilter = scope.getItemLabel(scope.model,scope.itemlabel);
+                if (scope.model != undefined && !scope.clearInputOnSelectionParsed){
+                    scope.setInputLabel(scope.model);
+                    //scope.modelfilter = scope.getItemLabel(scope.model,scope.itemlabel);
+                }
+
 
                 //cuando hago el unbind desde afuera de la directiva, tengo que borrar el filtro
                 scope.$watch('model', function (model_value) {
@@ -228,7 +273,8 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                         scope.removeItem();
 
                     } else {
-                        scope.modelfilter=scope.getItemLabel(scope.model,scope.itemlabel);
+                        scope.setInputLabel(scope.model);
+                        //scope.modelfilter=scope.getItemLabel(scope.model,scope.itemlabel);
                     }
                 }, true);
 

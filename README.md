@@ -80,6 +80,9 @@ angular
 | __popover-detail__ | Determina si se ve el popover con el detalle del item |*Boolean*|    '@' |
 | __popover-detail-placement__ | Determina donde se ubica el popover detail (left,right,top,left) |*String*|    '@' |
 | __showarrowbtn__ | Determina si se muestra el boton de la flecha para desplegar la lista sin filtrar |*Boolean*|    '@' |
+| __labelsininput__ | Determina si se muestran los labels separados por coma en el inpit, ej: labelsininput="descripcion, texto,   texto2" |*Boolean*|    '@' |
+| __withtooltip__ | Determina si se muestra un tooltip con los atributos |*Boolean*|    '@' |
+| __tooltipplacement__ | Determina posicion del tooltip |*String*|    '@' |
 
 
 
