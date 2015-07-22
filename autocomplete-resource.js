@@ -41,6 +41,10 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
                 scope.withTooltip=(scope.withtooltip=="true");
 
+                if (scope.tooltipplacement==null){
+                    scope.tooltipplacement="top";
+                }
+
                 scope.getTooltip=function(){
                     if (scope.withTooltip){
                         return scope.getLabels(scope.model);
