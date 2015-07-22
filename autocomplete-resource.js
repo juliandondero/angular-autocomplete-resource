@@ -64,10 +64,15 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
                     _.each(descriptions_attribs ,function(atrib,index){
                         var atrib_sin_espacios = atrib.replace(/\s+/, "");
-                        label+=scope.getItemLabel(selectedItem,atrib_sin_espacios);
-                        if (index < descriptions_attribs.length -1){
-                            label +=", ";
+                        var new_label=scope.getItemLabel(selectedItem,atrib_sin_espacios);
+
+                        if (new_label!=null){
+                            label+=new_label;
+                            if (index < descriptions_attribs.length -1){
+                                label +=", ";
+                            }
                         }
+
                     });
                     return label;
                 };
