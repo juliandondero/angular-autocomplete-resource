@@ -67,10 +67,11 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                         var new_label=scope.getItemLabel(selectedItem,atrib_sin_espacios);
 
                         if (new_label!=null){
-                            label+=new_label;
-                            if (index < descriptions_attribs.length -1){
+                            if (index > 0){
                                 label +=", ";
                             }
+                            label+=new_label;
+
                         }
 
                     });

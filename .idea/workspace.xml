@@ -30,12 +30,12 @@
         <entry file="file://$PROJECT_DIR$/dist/autocomplete-resource.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+              <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
               <folding>
-                <marker date="1437585315285" expanded="true" signature="13561:13579" placeholder="..." />
-                <marker date="1437585315285" expanded="true" signature="13698:13733" placeholder="..." />
-                <marker date="1437585315285" expanded="true" signature="13942:13991" placeholder="..." />
-                <marker date="1437585315285" expanded="true" signature="14358:14372" placeholder="..." />
+                <marker date="1437585540069" expanded="true" signature="13533:13551" placeholder="..." />
+                <marker date="1437585540069" expanded="true" signature="13670:13705" placeholder="..." />
+                <marker date="1437585540069" expanded="true" signature="13914:13963" placeholder="..." />
+                <marker date="1437585540069" expanded="true" signature="14330:14344" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -44,8 +44,8 @@
       <file leaf-file-name="autocomplete-resource.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autocomplete-resource.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.129032">
-              <caret line="77" column="18" selection-start-line="60" selection-start-column="16" selection-end-line="77" selection-end-column="18" />
+            <state vertical-scroll-proportion="-9.4838705">
+              <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="71" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -54,8 +54,8 @@
       <file leaf-file-name="bower.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bower.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.070866145">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.4606299">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -314,10 +314,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="243" column="2772" selection-start-line="243" selection-start-column="2772" selection-end-line="243" selection-end-column="2772" />
           <folding>
-            <marker date="1437585315285" expanded="true" signature="13561:13579" placeholder="..." />
-            <marker date="1437585315285" expanded="true" signature="13698:13733" placeholder="..." />
-            <marker date="1437585315285" expanded="true" signature="13942:13991" placeholder="..." />
-            <marker date="1437585315285" expanded="true" signature="14358:14372" placeholder="..." />
+            <marker date="1437585540069" expanded="true" signature="13533:13551" placeholder="..." />
+            <marker date="1437585540069" expanded="true" signature="13670:13705" placeholder="..." />
+            <marker date="1437585540069" expanded="true" signature="13914:13963" placeholder="..." />
+            <marker date="1437585540069" expanded="true" signature="14330:14344" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -696,8 +696,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/autocomplete-resource.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.129032">
-          <caret line="77" column="18" selection-start-line="60" selection-start-column="16" selection-end-line="77" selection-end-column="18" />
+        <state vertical-scroll-proportion="-9.4838705">
+          <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="71" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -705,20 +705,20 @@
     <entry file="file://$PROJECT_DIR$/dist/autocomplete-resource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="18" selection-start-line="77" selection-start-column="18" selection-end-line="77" selection-end-column="18" />
+          <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
           <folding>
-            <marker date="1437585315285" expanded="true" signature="13561:13579" placeholder="..." />
-            <marker date="1437585315285" expanded="true" signature="13698:13733" placeholder="..." />
-            <marker date="1437585315285" expanded="true" signature="13942:13991" placeholder="..." />
-            <marker date="1437585315285" expanded="true" signature="14358:14372" placeholder="..." />
+            <marker date="1437585540069" expanded="true" signature="13533:13551" placeholder="..." />
+            <marker date="1437585540069" expanded="true" signature="13670:13705" placeholder="..." />
+            <marker date="1437585540069" expanded="true" signature="13914:13963" placeholder="..." />
+            <marker date="1437585540069" expanded="true" signature="14330:14344" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.070866145">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.4606299">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
           <folding />
         </state>
       </provider>
