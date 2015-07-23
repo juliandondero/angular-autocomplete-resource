@@ -66,7 +66,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                         var atrib_sin_espacios = atrib.replace(/\s+/, "");
                         var new_label=scope.getItemLabel(selectedItem,atrib_sin_espacios);
 
-                        if (new_label!=null){
+                        if (new_label!=null && new_label!=""){
                             if (index > 0){
                                 label +=", ";
                             }
