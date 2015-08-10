@@ -30,10 +30,19 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 showarrowbtn:'@',
                 labelsininput:'@',
                 withtooltip:'@',
-                tooltipplacement:'@'
+                tooltipplacement:'@',
+                inputSize: '@'
 
             },
             link: function (scope, elem, attrs) {
+
+                if (scope.inputSize=='lg'){
+                    scope.inputGroupSize='input-group-lg';
+                }
+
+                if (scope.inputSize=='sm'){
+                    scope.inputGroupSize='input-group-sm';
+                }
 
                 scope.showArrowBtn=scope.showarrowbtn=="true";
 

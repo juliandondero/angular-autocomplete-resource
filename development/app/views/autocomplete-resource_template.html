@@ -1,6 +1,6 @@
 <div class="form-group">
     <label ng-show="label">{{label}}</label>
-    <div class="input-group">
+    <div class="input-group" ng-class="inputGroupSize">
         <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
 
         <input ng-disabled="ngdisabled" tooltip-placement="{{tooltipplacement}}" tooltip="{{getTooltip()}}" id="inputFilter" ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" placeholder="{{placeholder}}" ng-keydown="keyDown($event)"  ng-blur="handleBlur()" />

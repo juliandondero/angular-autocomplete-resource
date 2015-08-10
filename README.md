@@ -83,6 +83,7 @@ angular
 | __labelsininput__ | Determina si se muestran los labels separados por coma en el inpit, ej: labelsininput="descripcion, texto,   texto2" |*Boolean*|    '@' |
 | __withtooltip__ | Determina si se muestra un tooltip con los atributos |*Boolean*|    '@' |
 | __tooltipplacement__ | Determina posicion del tooltip |*String*|    '@' |
+| __input-size__ | Tamaño del input  ('lg, sm), si no se especifica es tamaño default' |*String*|  '@' |
 
 
 

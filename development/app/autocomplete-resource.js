@@ -30,16 +30,29 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 showarrowbtn:'@',
                 labelsininput:'@',
                 withtooltip:'@',
-                tooltipplacement:'@'
+                tooltipplacement:'@',
+                inputSize: '@'
 
             },
             link: function (scope, elem, attrs) {
+
+                if (scope.inputSize=='lg'){
+                    scope.inputGroupSize='input-group-lg';
+                }
+
+                if (scope.inputSize=='sm'){
+                    scope.inputGroupSize='input-group-sm';
+                }
 
                 scope.showArrowBtn=scope.showarrowbtn=="true";
 
                 scope.clearInputOnSelectionParsed = (scope.clearInputOnSelection=="true");
 
                 scope.withTooltip=(scope.withtooltip=="true");
+
+                if (scope.tooltipplacement==null){
+                    scope.tooltipplacement="top";
+                }
 
                 scope.getTooltip=function(){
                     if (scope.withTooltip){
@@ -60,10 +73,16 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
                     _.each(descriptions_attribs ,function(atrib,index){
                         var atrib_sin_espacios = atrib.replace(/\s+/, "");
-                        label+=scope.getItemLabel(selectedItem,atrib_sin_espacios);
-                        if (index < descriptions_attribs.length -1){
-                            label +=", ";
+                        var new_label=scope.getItemLabel(selectedItem,atrib_sin_espacios);
+
+                        if (new_label!=null && new_label!=""){
+                            if (index > 0){
+                                label +=", ";
+                            }
+                            label+=new_label;
+
                         }
+
                     });
                     return label;
                 };
