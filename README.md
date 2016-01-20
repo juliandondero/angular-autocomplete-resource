@@ -3,6 +3,8 @@
 
 Directiva de autocomplete para recursos (*ngResources*) de Angular. Utiliza *bootstrap* y *underscorejs*.
 
+
+
 ## Instalación
 * Instalar módulo
 
