@@ -84,7 +84,6 @@ angular
 | __withtooltip__ | Determina si se muestra un tooltip con los atributos |*Boolean*|    '@' |
 | __tooltipplacement__ | Determina posicion del tooltip |*String*|    '@' |
 | __input-size__ | Tamaño del input  ('lg, sm), si no se especifica es tamaño default' |*String*|  '@' |
-
 | __modelsourcefunction__ | Function del recurso de angular que será ejecutada, ejemplo query (default: query) |*String*|  '@' |
 | __searchtext__ | Modelo en donde sera bindeado el texto de busqueda |*String*|  '=' |
 | __clear-input-on-blur__ | Especifica si se borra el texto de busqueda al hacer blur del autocomplete |*String*|  '@' |
