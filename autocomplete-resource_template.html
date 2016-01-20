@@ -3,7 +3,7 @@
     <div class="input-group" ng-class="inputGroupSize">
         <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
 
-        <input ng-disabled="ngdisabled" tooltip-placement="{{tooltipplacement}}" tooltip="{{getTooltip()}}" id="inputFilter" ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" placeholder="{{placeholder}}" ng-keydown="keyDown($event)"  ng-blur="handleBlur()" />
+        <input ng-disabled="ngdisabled" tooltip-placement="{{tooltipplacement}}" tooltip="{{getTooltip()}}" id="inputFilter" ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" ng-trim="false" placeholder="{{placeholder}}" ng-keydown="keyDown($event)"  ng-blur="handleBlur()" />
         <span ng-if="!model && showArrowBtn" class="input-group-btn">
         	<button ng-click="searchAll()" ng-disabled="ngdisabled" ng-blur="handleBlur()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-down"></span></button>
       	</span>
@@ -25,7 +25,7 @@
                     >
 
                 <span ng-if="itemicon" class="itemicon" ng-class="itemicon" ></span>
-                <span ng-if="itemlabel" class="itemlabel">{{getItemLabel(item,itemlabel)}}</span>
+                <span  class="itemlabel">{{getItemLabel(item,itemlabel)}}</span>
                 <span ng-if="itemdescrip" class="itemdescrip">{{getItemLabel(item,itemdescrip)}}</span>
                 <span ng-if="itemdescrip2" class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</span>
                 <span class="autocomplete-reset-float"></span>

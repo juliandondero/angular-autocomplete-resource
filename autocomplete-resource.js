@@ -31,7 +31,11 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 labelsininput:'@',
                 withtooltip:'@',
                 tooltipplacement:'@',
-                inputSize: '@'
+                inputSize: '@',
+                modelsourcefunction:'@',
+                modelfilter:'=searchtext',
+                clearInputOnBlur:'@',
+                intervalWaitToCall:'@'
 
             },
             link: function (scope, elem, attrs) {
@@ -44,9 +48,19 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     scope.inputGroupSize='input-group-sm';
                 }
 
+                scope.intervalWaitToCallParsed = 500;
+                if (scope.intervalWaitToCall!=null){
+                    scope.intervalWaitToCallParsed=parseInt(scope.intervalWaitToCall);
+                }
+
                 scope.showArrowBtn=scope.showarrowbtn=="true";
 
                 scope.clearInputOnSelectionParsed = (scope.clearInputOnSelection=="true");
+
+                scope.clearOnBlurParsed = true;
+                if (scope.clearInputOnBlur=="false"){
+                    scope.clearOnBlurParsed=false;
+                };
 
                 scope.withTooltip=(scope.withtooltip=="true");
 
@@ -63,8 +77,9 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 };
                 scope.handleBlur = function () {
                     scope.listOpened = false;
-                    if (scope.model == undefined)
+                    if (scope.model == undefined && scope.clearOnBlurParsed)
                         scope.modelfilter = undefined;
+
 
                 };
                 scope.getItemLabels=function(selectedItem){
@@ -140,7 +155,13 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
                     params[scope.serviceatributefiltername] = filter;
 
-                    service.query(params, function (itemsReturned) {
+                    var query_func = service.query;
+
+                    if (scope.modelsourcefunction!=null){
+                        query_func = service[scope.modelsourcefunction];
+                    } 
+
+                    query_func(params, function (itemsReturned) {
 
                         if (scope.resultsin==undefined){
 
@@ -163,15 +184,15 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
                 scope.updateItemList = function(filter) {
 
+                    
                     var lastModelFilter =filter;
                     $timeout(function () {
-
                         if(lastModelFilter==scope.modelfilter)
                         {
                             scope.refreshItems(filter);
 
                         }
-                    }, 500);
+                    }, scope.intervalWaitToCallParsed);
 
 
                 };
@@ -182,8 +203,9 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     return scope.requiredmsj!=undefined && scope.requiredmsj!='';
                 }
                 scope.removeItem = function () {
+                    if (scope.model!=null && scope.clearOnBlurParsed) scope.modelfilter = undefined;
                     scope.model = undefined;
-                    scope.modelfilter = undefined;
+                    
                 };
 
                 scope.searchAll=function(){
@@ -209,7 +231,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                                 scope.removeItem();
 
                                 break;
-                            case 8:
+                            case 8:                                
                                 //es backspace
                                 scope.listOpened = undefined;
                                 if (scope.model == undefined)
@@ -234,7 +256,6 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                             default:
                                 var key = scope.getKeyFromEvent($event);
                                 scope.updateItemList(((scope.modelfilter != undefined) ? scope.modelfilter : "") + key);
-
                                 break;
                         }
 
@@ -276,6 +297,9 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                         });
 
                         return label;
+                    } else {
+                        // en el caso de que venga solo un array de elementos sin ser objetos
+                        return item;
                     }
                 };
 

@@ -85,6 +85,10 @@ angular
 | __tooltipplacement__ | Determina posicion del tooltip |*String*|    '@' |
 | __input-size__ | Tamaño del input  ('lg, sm), si no se especifica es tamaño default' |*String*|  '@' |
 
+| __modelsourcefunction__ | Function del recurso de angular que será ejecutada, ejemplo query (default: query) |*String*|  '@' |
+| __searchtext__ | Modelo en donde sera bindeado el texto de busqueda |*String*|  '=' |
+| __clear-input-on-blur__ | Especifica si se borra el texto de busqueda al hacer blur del autocomplete |*String*|  '@' |
+| __interval-wait-to-call__ | Delay en milisegundos para llamar al servicio una vez que el modelo deja de cambiar|*String*|  '@' |
 
 
 # Demo
