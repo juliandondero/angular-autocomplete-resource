@@ -202,8 +202,10 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 scope.tieneAlert=function(){
                     return scope.requiredmsj!=undefined && scope.requiredmsj!='';
                 }
-                scope.removeItem = function () {
-                    if (scope.model!=null && scope.clearOnBlurParsed) scope.modelfilter = undefined;
+                scope.removeItem = function (preserveFilter) {
+                    if (preserveFilter==null || !preserveFilter){
+                        scope.modelfilter = undefined;
+                    };
                     scope.model = undefined;
                     
                 };
@@ -228,7 +230,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                             case 27:
                                 //es escape, cerramos la lista y borramos el input
                                 scope.listOpened = undefined;
-                                scope.removeItem();
+                                scope.removeItem(!scope.clearOnBlurParsed);
 
                                 break;
                             case 8:                                
@@ -313,7 +315,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 scope.$watch('model', function (model_value) {
                     if (model_value == undefined) {
                         //scope.modelfilter=undefined;
-                        scope.removeItem();
+                        scope.removeItem(false);
 
                     } else {
                         scope.setInputLabel(scope.model);

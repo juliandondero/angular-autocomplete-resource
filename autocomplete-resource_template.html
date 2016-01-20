@@ -8,7 +8,7 @@
         	<button ng-click="searchAll()" ng-disabled="ngdisabled" ng-blur="handleBlur()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-down"></span></button>
       	</span>
 		<span ng-if="model && !clearInputOnSelectionParsed" class="input-group-btn">
-        	<button ng-click="removeItem()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button>
+        	<button ng-click="removeItem(!clearOnBlurParsed)" class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button>
       	</span>
 
     </div>
