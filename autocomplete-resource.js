@@ -288,7 +288,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 };
                 //retorna el label del item,puede ser recursivo es decir: item.propiedad.propiedad2
                 scope.getItemLabel = function (item,path) {
-                    if (path!=undefined) {
+                    if (item!=null && path!=undefined) {
                         var atributes = path.split(".");
 
                         var label = item;
