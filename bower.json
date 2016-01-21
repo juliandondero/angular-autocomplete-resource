@@ -1,11 +1,11 @@
 {
     "name": "autocomplete-recource",
-    "version": "1.12.0",
+    "version": "1.13.0",
     "authors": [
         "jdondero <juliandondero@gmail.com>"
     ],
     "description": "Directiva de autocomplete para recursos de angular",
-    "main": ["dist/autocomplete-resource.js","dist/stylesheets/autocomplete-resource.css"],
+    "main": ["dist/autocomplete-resource.js","dist/stylesheets/autocomplete-resource.css","dist/images/ajax-loader-autocomplete.gif"],
     "keywords": [
         "autocomplete",
         "resource",

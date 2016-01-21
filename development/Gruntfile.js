@@ -386,6 +386,11 @@ module.exports = function (grunt) {
                     cwd: '<%= yeoman.app %>/../../sass/',
                     src: '*',
                     dest: '<%= yeoman.app %>/styles/'
+                }, {
+                  expand: true,
+                  cwd: '<%= yeoman.app %>/../../',
+                  src: 'ajax-loader-autocomplete.gif',
+                  dest: '<%= yeoman.app %>/images/'
                 }]
 
 

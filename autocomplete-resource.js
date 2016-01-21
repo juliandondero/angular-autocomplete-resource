@@ -161,7 +161,8 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                         query_func = service[scope.modelsourcefunction];
                     } 
 
-                    query_func(params, function (itemsReturned) {
+                    scope.searching=true;
+                    var query_promise = query_func(params, function (itemsReturned) {
 
                         if (scope.resultsin==undefined){
 
@@ -179,6 +180,12 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
                         //muestro la lista de items
                         scope.listOpened = true;
+                    },function(errors){
+                        console.log(errors);
+                    });
+
+                    query_promise.$promise.finally(function(){
+                        scope.searching=false;
                     });
                 };
 
