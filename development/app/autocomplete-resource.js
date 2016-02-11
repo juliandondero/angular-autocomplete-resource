@@ -35,10 +35,15 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 modelsourcefunction:'@',
                 modelfilter:'=searchtext',
                 clearInputOnBlur:'@',
-                intervalWaitToCall:'@'
+                intervalWaitToCall:'@',
+                imgItemPreviewSrcAttrib:'@'
 
             },
             link: function (scope, elem, attrs) {
+
+                if (scope.imgItemPreviewSrcAttrib!='' && scope.imgItemPreviewSrcAttrib!=null){
+                    scope.imgItemPreviewSrcAttribParsed = scope.imgItemPreviewSrcAttrib;
+                };
 
                 if (scope.inputSize=='lg'){
                     scope.inputGroupSize='input-group-lg';

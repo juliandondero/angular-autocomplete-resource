@@ -130,3 +130,9 @@ autocomplete-resource .tieneAlert {
 .autocomplete-popover .itemdescrip2 {
   color: #999;
 }
+
+/* line 151, ../../sass/autocomplete-resource.scss */
+.autocomplete-img-preview {
+  height: 50px;
+  margin-right: 5px;
+}
