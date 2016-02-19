@@ -24,8 +24,8 @@
 
                     >
 
-                <span ng-hide="imgItemPreviewSrcAttribParsed" ng-if="itemicon" class="itemicon" ng-class="itemicon" ></span>
-                <img class="autocomplete-img-preview" ng-show="imgItemPreviewSrcAttribParsed" ng-src="{{getItemLabel(item,imgItemPreviewSrcAttribParsed)}}" />
+                <span ng-if="!imgItemPreviewSrcAttribParsed" ng-if="itemicon" class="itemicon" ng-class="itemicon" ></span>
+                <span ng-if="imgItemPreviewSrcAttribParsed"><img class="autocomplete-img-preview"  ng-src="{{getItemLabel(item,imgItemPreviewSrcAttribParsed)}}" /></span>
                 <span  class="itemlabel">{{getItemLabel(item,itemlabel)}}</span>
                 <span ng-if="itemdescrip" class="itemdescrip">{{getItemLabel(item,itemdescrip)}}</span>
                 <span ng-if="itemdescrip2" class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</span>

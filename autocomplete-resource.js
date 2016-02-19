@@ -41,8 +41,10 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
             },
             link: function (scope, elem, attrs) {
 
-                if (scope.imgItemPreviewSrcAttrib!='' && scope.imgItemPreviewSrcAttrib!=null){
+                if (scope.imgItemPreviewSrcAttrib!=null && scope.imgItemPreviewSrcAttrib!=''){
                     scope.imgItemPreviewSrcAttribParsed = scope.imgItemPreviewSrcAttrib;
+                } else {
+                    scope.imgItemPreviewSrcAttribParsed=null;
                 };
 
                 if (scope.inputSize=='lg'){
