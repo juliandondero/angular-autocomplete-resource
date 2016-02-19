@@ -4,19 +4,22 @@
             "descripcion": "Buenos aires Buenos aires Buenos aires Buenos aires",
             "id": 1,
             "texto": "Capital federal ",
-            "texto2": "Argentina"
+            "texto2": "Argentina",
+            "img":"https://avatars2.githubusercontent.com/u/7959623?v=3&s=40"
         },
         {
             "descripcion": "Mendoza",
             "id": 2,
             "texto": "Capital federal",
-            "texto2": "Argentina"
+            "texto2": "Argentina",
+          "img":"https://avatars2.githubusercontent.com/u/7959623?v=3&s=40"
         },
         {
             "descripcion": "Jujuy",
             "id": 3,
             "texto": "Capital federal",
-            "texto2": "Argentina"
+            "texto2": "Argentina",
+          "img":"https://avatars2.githubusercontent.com/u/7959623?v=3&s=40"
         }
     ]
 }

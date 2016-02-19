@@ -1,7 +1,7 @@
 <div class="form-group">
     <label ng-show="label">{{label}}</label>
     <div class="input-group" ng-class="inputGroupSize">
-        <span class="input-group-addon"><img src="images/ajax-loader-autocomplete.gif" style="height:15px;" ng-show="searching" /><span ng-show="!searching" class="glyphicon glyphicon-search"></span></span>
+        <span class="input-group-addon"><img src="bower_components/autocomplete-resource/dist/images/ajax-loader-autocomplete.gif" style="height:15px;" ng-show="searching" /><span ng-show="!searching" class="glyphicon glyphicon-search"></span></span>
 
         <input ng-disabled="ngdisabled" tooltip-placement="{{tooltipplacement}}" tooltip="{{getTooltip()}}" id="inputFilter" ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" ng-trim="false" placeholder="{{placeholder}}" ng-keydown="keyDown($event)"  ng-blur="handleBlur()" />
         <span ng-if="!model && showArrowBtn" class="input-group-btn">
@@ -24,7 +24,8 @@
 
                     >
 
-                <span ng-if="itemicon" class="itemicon" ng-class="itemicon" ></span>
+                <span ng-hide="imgItemPreviewSrcAttribParsed" ng-if="itemicon" class="itemicon" ng-class="itemicon" ></span>
+                <img class="autocomplete-img-preview" ng-show="imgItemPreviewSrcAttribParsed" ng-src="{{getItemLabel(item,imgItemPreviewSrcAttribParsed)}}" />
                 <span  class="itemlabel">{{getItemLabel(item,itemlabel)}}</span>
                 <span ng-if="itemdescrip" class="itemdescrip">{{getItemLabel(item,itemdescrip)}}</span>
                 <span ng-if="itemdescrip2" class="itemdescrip2">{{getItemLabel(item,itemdescrip2)}}</span>

@@ -20,8 +20,8 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 itemicon: '@',
                 serviceatributefiltername: '@',
                 onSelect: '&',
-                prefilters: '=',
-                ngdisabled: '=',
+                prefilters: '=?',
+                ngdisabled: '=?',
                 resultsin:'@',
                 itemDetail:'@',
                 wrapText:   '@',
@@ -33,12 +33,17 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 tooltipplacement:'@',
                 inputSize: '@',
                 modelsourcefunction:'@',
-                modelfilter:'=searchtext',
+                modelfilter:'=?searchtext',
                 clearInputOnBlur:'@',
-                intervalWaitToCall:'@'
+                intervalWaitToCall:'@',
+                imgItemPreviewSrcAttrib:'@'
 
             },
             link: function (scope, elem, attrs) {
+
+                if (scope.imgItemPreviewSrcAttrib!='' && scope.imgItemPreviewSrcAttrib!=null){
+                    scope.imgItemPreviewSrcAttribParsed = scope.imgItemPreviewSrcAttrib;
+                };
 
                 if (scope.inputSize=='lg'){
                     scope.inputGroupSize='input-group-lg';
