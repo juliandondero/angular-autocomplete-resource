@@ -36,7 +36,8 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 modelfilter:'=?searchtext',
                 clearInputOnBlur:'@',
                 intervalWaitToCall:'@',
-                imgItemPreviewSrcAttrib:'@'
+                imgItemPreviewSrcAttrib:'@',
+                appendString:'@'
 
             },
             link: function (scope, elem, attrs) {
@@ -137,7 +138,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     scope.selected = true;
                     scope.listOpened = false;
                     $timeout(function () {
-                        scope.onSelect();
+                        scope.onSelect({item: selectedItem});
                     }, 200);
                 };
 
@@ -159,6 +160,10 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                         params = scope.prefilters;
                     }
 
+                    //apendeamos al search lo que pasamos por parametro
+                    if (scope.appendString!=null){
+                        filter = filter + scope.appendString;
+                    }
 
                     params[scope.serviceatributefiltername] = filter;
 

@@ -73,7 +73,7 @@ angular
 | __clearInputOnSelection__ | Borra el input al seleccionar un item. (quedará bindeado en *model* |*Boolean*|    '@' |
 | __itemicon__ | Icono de bootstrap utilizado en cada item del autocomplete. |*String*|    '@' |
 | __serviceatributefiltername__ | Nombre de variable enviado para la búsqueda. Por ejemplo, si se utiliza *term*, y se escribe en el imput "abc" el request será enviado con un parámetro get, *<url del metodo query del recurso>?term=abc* |*String*|    '@' |
-| __onSelect__ | Función de callback ejecutada al seleccionar un item de la lista. |*function*|    '=' |
+| __onSelect__ | Función de callback ejecutada al seleccionar un item de la lista. ej: onSelection(item). Item es el item seleccionado. |*function*|    '=' |
 | __prefilters__ | Filtros extras enviados en el método query del recurso. Estos pueden ser *bindeados* a objetos fuera de la directiva. Por ejemplo otro select externo para elegir el país. El autocomplete harà el get con el filtro del pais elegido desde el controllador que utiliza la directiva. |*Object*|    '=' |
 | __ngdisabled__ | Expresión para determinar si el input esta desabilitado o habilitado. |*Expression*|    '=' |
 | __resultsin__ | Determina en que atributo del json de respuesta, viene la colección para el autocomplete. (django rest: results {total:...,results:[...]}. Si este atributo no se setea, buscara un array si la respuesta es un array, o un array dentro de .results, si la respuesta es un objeto.  |*String*|    '@' |
@@ -91,6 +91,7 @@ angular
 | __clear-input-on-blur__ | Especifica si se borra el texto de busqueda al hacer blur del autocomplete |*String*|  '@' |
 | __interval-wait-to-call__ | Delay en milisegundos para llamar al servicio una vez que el modelo deja de cambiar|*String*|  '@' |
 | __imgItemPreviewSrcAttrib__ | nombre de atributo en el resultado que se usa para el src de un preview de imagen |*String*|  '@' |
+| __appendString__ | string que agregamos al search |*String*|  '@' |
 
 
 
