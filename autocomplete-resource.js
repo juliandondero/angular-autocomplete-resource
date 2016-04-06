@@ -157,7 +157,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     var service = elem.injector().get(scope.modelsourcename);
                     var params = {};
                     if (scope.prefilters) {
-                        params = scope.prefilters;
+                        params = _.clone(scope.prefilters);
                     }
 
                     //apendeamos al search lo que pasamos por parametro
