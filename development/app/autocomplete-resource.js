@@ -20,6 +20,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 itemicon: '@',
                 serviceatributefiltername: '@',
                 onSelect: '&',
+                onRemove: '&',
                 prefilters: '=?',
                 ngdisabled: '=?',
                 resultsin:'@',
@@ -36,7 +37,8 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 modelfilter:'=?searchtext',
                 clearInputOnBlur:'@',
                 intervalWaitToCall:'@',
-                imgItemPreviewSrcAttrib:'@'
+                imgItemPreviewSrcAttrib:'@',
+                appendString:'@'
 
             },
             link: function (scope, elem, attrs) {
@@ -137,7 +139,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     scope.selected = true;
                     scope.listOpened = false;
                     $timeout(function () {
-                        scope.onSelect();
+                        scope.onSelect({item: selectedItem});
                     }, 200);
                 };
 
@@ -156,9 +158,13 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     var service = elem.injector().get(scope.modelsourcename);
                     var params = {};
                     if (scope.prefilters) {
-                        params = scope.prefilters;
+                        params = _.clone(scope.prefilters);
                     }
 
+                    //apendeamos al search lo que pasamos por parametro
+                    if (scope.appendString!=null){
+                        filter = filter + scope.appendString;
+                    }
 
                     params[scope.serviceatributefiltername] = filter;
 
@@ -217,11 +223,13 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     return scope.requiredmsj!=undefined && scope.requiredmsj!='';
                 }
                 scope.removeItem = function (preserveFilter) {
+
                     if (preserveFilter==null || !preserveFilter){
                         scope.modelfilter = undefined;
                     };
                     scope.model = undefined;
-                    
+
+
                 };
 
                 scope.searchAll=function(){
@@ -326,15 +334,26 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
 
                 //cuando hago el unbind desde afuera de la directiva, tengo que borrar el filtro
-                scope.$watch('model', function (model_value) {
-                    if (model_value == undefined) {
-                        //scope.modelfilter=undefined;
-                        scope.removeItem(false);
+                scope.$watch('model', function (model_value,old_value) {
 
-                    } else {
-                        scope.setInputLabel(scope.model);
-                        //scope.modelfilter=scope.getItemLabel(scope.model,scope.itemlabel);
-                    }
+                        if (model_value == null) {
+                            //scope.modelfilter=undefined;
+                            scope.removeItem(false);
+
+                            if ((model_value!=old_value) && (scope.onRemove!=null)){
+
+                                    scope.onRemove();
+
+                            }
+                        } else {
+                            scope.setInputLabel(scope.model);
+                            //scope.modelfilter=scope.getItemLabel(scope.model,scope.itemlabel);
+                        }
+
+
+
+
+
                 }, true);
 
                 scope.withEllipsis=function(){

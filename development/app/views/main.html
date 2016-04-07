@@ -14,10 +14,11 @@
                                           itemicon="glyphicon glyphicon-tag"
                                           requiredmsj=""
                                           itemlabel="descripcion"
-
+                                          on-remove="quiteItem()"
                                           idautocomplete=""
                                           classautocomplete="form-control" label="Test"
-                                          placeholder="Ciudades" model="model.ciudad"
+                                          placeholder="Ciudades"
+                                          model="model.ciudad"
                                           modelsourcefunction="query"
                                           searchtext=""
                                           modelsourcename="TestService"
@@ -27,3 +28,6 @@
                                           >
                             </autocomplete-resource>
 search text: {{searchText}}
+<br>
+
+<button class="btn btn-default" ng-click="model.ciudad=null"> borrar</button>
