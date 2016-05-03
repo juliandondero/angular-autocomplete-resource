@@ -66,7 +66,7 @@ angular
 | __idautocomplete__ | id asignado al autocomplete dentro del DOM| *String* |   '@' |
 | __classautocomplete__ | clase asignada al autocomplete dentro del DOM| *String*|    '@' |
 | __placeholder__ | Placeholder del input del autocomplete | *String* |   '@' |
-| __isrequired__ | El input es requerido |*Boolean*|    '@' |
+| __isrequired__ | El input es requerido |*Object binded*|    '=' |
 | __requiredmsj__ | Mensaje en caso de no estar completo el input y ser requerido |*String*|    '@' |
 | __model__ | Modelo *bindeado* al recurso que se selecciona en el autocomplete |*Object*|    '=' |
 | __modelsourcename__ | Nombre del recurso de angular (será inyectado luego por la directiva), utilizado para hacer el request. Utiliza el metodo *query* del recurso. |*String*|    '@' |
