@@ -3,7 +3,7 @@
     <div class="input-group" ng-class="inputGroupSize">
         <span class="input-group-addon"><img src="bower_components/autocomplete-resource/dist/images/ajax-loader-autocomplete.gif" style="height:15px;" ng-show="searching" /><span ng-show="!searching" class="glyphicon glyphicon-search"></span></span>
 
-        <input ng-disabled="ngdisabled" tooltip-placement="{{tooltipplacement}}" tooltip="{{getTooltip()}}" id="inputFilter" ng-required="{{isrequired}}" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" ng-trim="false" placeholder="{{placeholder}}" ng-keydown="keyDown($event)"  ng-blur="handleBlur()" />
+        <input ng-disabled="ngdisabled" tooltip-placement="{{tooltipplacement}}" tooltip="{{getTooltip()}}" id="inputFilter" ng-required="isrequired" autocomplete="off" class="{{classautocomplete}} form-control" id="{{idautocomplete}}" type="text" ng-model="modelfilter" ng-trim="false" placeholder="{{placeholder}}" ng-keydown="keyDown($event)"  ng-blur="handleBlur()" />
         <span ng-if="!model && showArrowBtn" class="input-group-btn">
         	<button ng-click="searchAll()" ng-disabled="ngdisabled" ng-blur="handleBlur()" class="btn btn-default" type="button"><span class="glyphicon glyphicon-chevron-down"></span></button>
       	</span>
@@ -13,7 +13,7 @@
 
     </div>
     <div style="position:relative;" ng-class="{'top-label':haveLabel(),'top-sin-label':!haveLabel(),'tieneAlert': tieneAlert() }"  >
-        <alert style="position:absolute;top:0px;left:0px;" type="danger" ng-show="((model.$invalid) || (model==undefined) ) && requiredmsj && isrequired" ><span class="glyphicon glyphicon-warning-sign"></span> {{requiredmsj}}</alert>
+        <alert style="position:absolute;top:0px;left:0px;" type="danger" ng-if="(model==null && isrequired && tieneAlert())" ><span class="glyphicon glyphicon-warning-sign"></span> {{requiredmsj}}</alert>
 
         <ul class="autocomplete dropdown-menu" style="display:block;position:absolute;top:0px;left:0px;" ng-hide="!listOpened || selected"  role="menu"  >
             <li ng-hide="items.length>0" class="autocomplete-warning-label"><span class="glyphicon glyphicon-info-sign"></span> No se encontraron resultados </li>

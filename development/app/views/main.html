@@ -1,5 +1,5 @@
 <h4>Test autocomplete angular</h4>
-
+<form name="formulario">
                                         <autocomplete-resource
                                           input-size=""
                                           item-detail="false"
@@ -9,10 +9,10 @@
                                           popover-detail="false"
                                           popover-detail-placement="right"
                                           wrap-text="false"
-                                          isrequired="true"
+                                          isrequired="condiciones.required"
                                           resultsin="data"
                                           itemicon="glyphicon glyphicon-tag"
-                                          requiredmsj=""
+                                          requiredmsj="requerido"
                                           itemlabel="descripcion"
                                           on-remove="quiteItem()"
                                           idautocomplete=""
@@ -29,5 +29,10 @@
                             </autocomplete-resource>
 search text: {{searchText}}
 <br>
-
+  <input type="checkbox"
+         ng-model="condiciones.required"
+         ng-true-value="true"
+         [ng-false-value="false">
+</form>
 <button class="btn btn-default" ng-click="model.ciudad=null"> borrar</button>
+<span ng-if="formulario.$invalid">Formulario invalido</span>

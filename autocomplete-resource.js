@@ -220,7 +220,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     return scope.label!=undefined;
                 }
                 scope.tieneAlert=function(){
-                    return scope.requiredmsj!=undefined && scope.requiredmsj!='';
+                    return scope.requiredmsj!=null && scope.requiredmsj!='';
                 }
                 scope.removeItem = function (preserveFilter) {
 

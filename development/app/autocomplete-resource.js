@@ -12,7 +12,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 idautocomplete: '@',
                 classautocomplete: '@',
                 placeholder: '@',
-                isrequired: '@',
+                isrequired: '=',
                 requiredmsj: '@',
                 model: '=',
                 modelsourcename: '@',
@@ -42,7 +42,6 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
             },
             link: function (scope, elem, attrs) {
-
                 if (scope.imgItemPreviewSrcAttrib!=null && scope.imgItemPreviewSrcAttrib!=''){
                     scope.imgItemPreviewSrcAttribParsed = scope.imgItemPreviewSrcAttrib;
                 } else {
@@ -76,6 +75,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 if (scope.tooltipplacement==null){
                     scope.tooltipplacement="top";
                 }
+
 
                 scope.getTooltip=function(){
                     if (scope.withTooltip){
@@ -172,7 +172,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
                     if (scope.modelsourcefunction!=null){
                         query_func = service[scope.modelsourcefunction];
-                    } 
+                    }
 
                     scope.searching=true;
                     var query_promise = query_func(params, function (itemsReturned) {
@@ -204,7 +204,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
                 scope.updateItemList = function(filter) {
 
-                    
+
                     var lastModelFilter =filter;
                     $timeout(function () {
                         if(lastModelFilter==scope.modelfilter)
@@ -220,7 +220,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     return scope.label!=undefined;
                 }
                 scope.tieneAlert=function(){
-                    return scope.requiredmsj!=undefined && scope.requiredmsj!='';
+                    return scope.requiredmsj!=null && scope.requiredmsj!='';
                 }
                 scope.removeItem = function (preserveFilter) {
 
@@ -255,7 +255,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                                 scope.removeItem(!scope.clearOnBlurParsed);
 
                                 break;
-                            case 8:                                
+                            case 8:
                                 //es backspace
                                 scope.listOpened = undefined;
                                 if (scope.model == undefined)
@@ -349,10 +349,6 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                             scope.setInputLabel(scope.model);
                             //scope.modelfilter=scope.getItemLabel(scope.model,scope.itemlabel);
                         }
-
-
-
-
 
                 }, true);
 

@@ -11,6 +11,10 @@ angular.module('testAutocompleteApp')
   .controller('MainCtrl', function ($scope) {
 
     $scope.quiteItem=function(){
-      alert("quite!");
-    }
+    //  alert("quite!");
+    };
+
+    $scope.condiciones={
+      required:true
+    };
   });
