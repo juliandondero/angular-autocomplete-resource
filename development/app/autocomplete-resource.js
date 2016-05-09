@@ -135,7 +135,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
 
                     }
                     scope.model = selectedItem;
-                    scope.current = 0;
+                    scope.current = -1;
                     scope.selected = true;
                     scope.listOpened = false;
                     $timeout(function () {
@@ -143,10 +143,10 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     }, 200);
                 };
 
-                scope.current = 0;
+                scope.current = -1;
                 scope.selected = true; // hides the list initially
                 scope.isCurrent = function (index) {
-                    return scope.current == index;
+                    return (scope.current!=null) && (scope.current == index);
                 };
                 scope.setCurrent = function (index) {
                     scope.current = index;
@@ -189,7 +189,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                         }
 
                         scope.selected = false;
-                        scope.current = 0;
+                        scope.current = -1;
 
                         //muestro la lista de items
                         scope.listOpened = true;
@@ -293,22 +293,29 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                                 } else {
 
                                     scope.current = scope.current + 1;
+                                    scope.limitIndex();
                                 }
 
                                 break;
                             case 38:
                                 scope.current = scope.current - 1;
+                                scope.limitIndex();
                                 break;
                             case 13: //enter
-                                scope.handleSelection(scope.items[scope.current]);
+                                if (scope.current!=null && scope.current>=0)
+                                    scope.handleSelection(scope.items[scope.current]);
                                 break;
                         }
 
-                        if (scope.items != undefined && scope.current > scope.items.length - 1) scope.current = scope.items.length - 1;
-                        if (scope.items != undefined && scope.current < 0) scope.current = 0;
+
                     }
 
 
+                };
+
+                scope.limitIndex=function(){
+                    if (scope.items != undefined && scope.current > scope.items.length - 1) scope.current = scope.items.length - 1;
+                    if (scope.items != undefined && scope.current < 0) scope.current = 0;
                 };
                 //retorna el label del item,puede ser recursivo es decir: item.propiedad.propiedad2
                 scope.getItemLabel = function (item,path) {
