@@ -251,24 +251,24 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                         switch ($event.keyCode) {
                             case 27:
                                 //es escape, cerramos la lista y borramos el input
-                                scope.listOpened = undefined;
+                                scope.listOpened = null;
                                 scope.removeItem(!scope.clearOnBlurParsed);
 
                                 break;
                             case 8:
                                 //es backspace
-                                scope.listOpened = undefined;
+                                scope.listOpened = null;
                                 if (scope.model == undefined)
                                 {
                                     var filter = '';
-                                    if (scope.modelfilter!=undefined)
+                                    if (scope.modelfilter!=null)
                                       var  filter=scope.modelfilter.substr(0,scope.modelfilter.length-1);
                                     scope.updateItemList(filter);
 
                                 }
                                 else
                                 {
-                                    scope.model = undefined;
+                                    scope.model = null;
                                 }
 
 
@@ -279,7 +279,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                                 break;
                             default:
                                 var key = scope.getKeyFromEvent($event);
-                                scope.updateItemList(((scope.modelfilter != undefined) ? scope.modelfilter : "") + key);
+                                scope.updateItemList(((scope.modelfilter != null) ? scope.modelfilter : "") + key);
                                 break;
                         }
 
@@ -302,8 +302,12 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                                 scope.limitIndex();
                                 break;
                             case 13: //enter
-                                if (scope.current!=null && scope.current>=0)
+                                if (scope.current!=null && scope.current>=0) {
                                     scope.handleSelection(scope.items[scope.current]);
+                                } else {
+                                    //si no hay item seleccinado y se ingreso enter, cerramos el autocomplete
+                                    scope.listOpened = null;
+                                }
                                 break;
                         }
 
@@ -334,7 +338,7 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                     }
                 };
 
-                if (scope.model != undefined && !scope.clearInputOnSelectionParsed){
+                if (scope.model != null && !scope.clearInputOnSelectionParsed){
                     scope.setInputLabel(scope.model);
                     //scope.modelfilter = scope.getItemLabel(scope.model,scope.itemlabel);
                 }
