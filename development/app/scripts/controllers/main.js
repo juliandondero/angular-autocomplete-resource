@@ -15,6 +15,7 @@ angular.module('testAutocompleteApp')
     };
 
     $scope.condiciones={
-      required:true
+      required:true,
+      readonly:true
     };
   });

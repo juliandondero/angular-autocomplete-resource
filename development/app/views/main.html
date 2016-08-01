@@ -12,7 +12,8 @@
                                           isrequired="condiciones.required"
                                           resultsin="data"
                                           itemicon="glyphicon glyphicon-tag"
-                                          requiredmsj="requerido"
+                                          requiredmsj=""
+                                          read-only="condiciones.readonly"
                                           itemlabel="descripcion"
                                           on-remove="quiteItem()"
                                           idautocomplete=""
@@ -29,10 +30,17 @@
                             </autocomplete-resource>
 search text: {{searchText}}
 <br>
+  <label>required</label>
   <input type="checkbox"
          ng-model="condiciones.required"
          ng-true-value="true"
-         [ng-false-value="false">
+         ng-false-value="false">
+
+  <label>readonly</label>
+    <input type="checkbox"
+           ng-model="condiciones.readonly"
+           ng-true-value="true"
+           ng-false-value="false">
 </form>
 <button class="btn btn-default" ng-click="model.ciudad=null"> borrar</button>
 <span ng-if="formulario.$invalid">Formulario invalido</span>

@@ -17,5 +17,8 @@
     "angular-mocks": "1.4.9",
     "angular-scenario": "1.4.9"
   },
-  "appPath": "app"
+  "appPath": "app",
+  "resolutions": {
+    "angular": "1.4.9"
+  }
 }

@@ -38,7 +38,8 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 clearInputOnBlur:'@',
                 intervalWaitToCall:'@',
                 imgItemPreviewSrcAttrib:'@',
-                appendString:'@'
+                appendString:'@',
+                readOnly:'='
 
             },
             link: function (scope, elem, attrs) {
