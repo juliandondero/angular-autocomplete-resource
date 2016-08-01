@@ -93,6 +93,7 @@ angular
 | __interval-wait-to-call__ | Delay en milisegundos para llamar al servicio una vez que el modelo deja de cambiar|*String*|  '@' |
 | __imgItemPreviewSrcAttrib__ | nombre de atributo en el resultado que se usa para el src de un preview de imagen |*String*|  '@' |
 | __appendString__ | string que agregamos al search |*String*|  '@' |
+| __read-only__ | Booleano *bindeado* al recurso para determinar si es readonly |*Object*|    '=' |
 
 
 
