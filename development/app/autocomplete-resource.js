@@ -21,6 +21,8 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                 serviceatributefiltername: '@',
                 onSelect: '&',
                 onRemove: '&',
+                onEmpty: '&',
+                onError: '&',
                 prefilters: '=?',
                 ngdisabled: '=?',
                 resultsin:'@',
@@ -195,11 +197,14 @@ angular.module('autocomplete-resource',['ui.bootstrap'])
                         //muestro la lista de items
                         scope.listOpened = true;
                     },function(errors){
-                        console.log(errors);
+                        scope.onError({errors: errors});
                     });
 
                     query_promise.$promise.finally(function(){
                         scope.searching=false;
+                        if (scope.onEmpty!=null && scope.items.length<=0) {
+                            scope.onEmpty();
+                        }
                     });
                 };
 

@@ -18,4 +18,8 @@ angular.module('testAutocompleteApp')
       required:true,
       readonly:true
     };
+
+    $scope.emptyTest=function(){
+        alert("busqueda sin resultados");
+    };
   });

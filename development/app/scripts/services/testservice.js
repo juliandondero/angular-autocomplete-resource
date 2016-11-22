@@ -9,9 +9,9 @@
  */
 angular.module('testAutocompleteApp')
   .factory('TestService', ['$resource',function ($resource) {
-    
+
     // Public API here
-    return $resource('test.json',{},
+    return $resource('test_empty.json',{},
     	{
     		query:{method: 'GET'},
     		query_array: {
